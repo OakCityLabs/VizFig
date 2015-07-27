@@ -2,19 +2,13 @@
 
 from swift import *
 
-print "Hello World!"
-print "Swift module name:", swiftModuleName()
-print "ObjectiveC header file:", objcHeaderFile()
+# print "Hello World!"
+# print "Swift module name:", swiftModuleName()
+# print "ObjectiveC header file:", objcHeaderFile()
 
-configClassName = "Configuration"
+inputClass = "Configuration"
 outputClass = "MagicView"
 
-attrs = configurationAttributes(configClassName)
-#print "Found attributes:", attrs
-#print "Done."
+outputFile = generateConfigViewForClass(inputClass, outputClass)
 
-classTxt = generateConfigViewClass(attrs, configClassName, outputClass)
-print "Generated class:\n", classTxt
-
-newFile = writeClassToFile(classTxt, outputClass)
-print "Wrote class to:", newFile
+print "Wrote class to:", outputFile
