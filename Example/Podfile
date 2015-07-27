@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'VizFig_Example', :exclusive => true do
+  pod "VizFig", :path => "../"
+end
+
+target 'VizFig_Tests', :exclusive => true do
+  pod "VizFig", :path => "../"
+
+  
+end

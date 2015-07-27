@@ -1,15 +1,8 @@
-//
-//  VizFigDemoTests.swift
-//  VizFigDemoTests
-//
-//  Created by Jay Lyerly on 6/9/15.
-//  Copyright (c) 2015 Oak City Labs. All rights reserved.
-//
-
 import UIKit
 import XCTest
+import VizFig
 
-class VizFigDemoTests: XCTestCase {
+class Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()

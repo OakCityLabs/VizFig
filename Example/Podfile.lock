@@ -1,0 +1,14 @@
+PODS:
+  - VizFig (0.1.0)
+
+DEPENDENCIES:
+  - VizFig (from `../`)
+
+EXTERNAL SOURCES:
+  VizFig:
+    :path: ../
+
+SPEC CHECKSUMS:
+  VizFig: 904cb1e1941e010906570bca39356b5212407fcb
+
+COCOAPODS: 0.37.2

@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  VizFigDemo
+//  VizFig
 //
-//  Created by Jay Lyerly on 6/9/15.
-//  Copyright (c) 2015 Oak City Labs. All rights reserved.
+//  Created by Jay Lyerly on 07/27/2015.
+//  Copyright (c) 2015 Jay Lyerly. All rights reserved.
 //
 
 import UIKit
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
