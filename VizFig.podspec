@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'VizFig' => ['Pod/Assets/*.png']
   }
-
+  s.preserve_paths = 'Scripts/*'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'

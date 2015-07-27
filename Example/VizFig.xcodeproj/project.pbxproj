@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		D4AA7F49B2D58C43D652D1A2 /* Pods_VizFig_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80AB4EBA518DBF14889F0D1 /* Pods_VizFig_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EC6B791B1B666D3A002478A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B791A1B666D3A002478A9 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		98231A196C88C784D0443218 /* Pods-VizFig_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D80AB4EBA518DBF14889F0D1 /* Pods_VizFig_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VizFig_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EC88CCBC7E96E1EF4FB470 /* Pods-VizFig_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC6B791A1B666D3A002478A9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F0531B1758E126E026D97342 /* Pods-VizFig_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				EC6B791A1B666D3A002478A9 /* Config.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -166,6 +169,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "VizFig_Example" */;
 			buildPhases = (
+				EC6B79191B6669DB002478A9 /* ShellScript */,
 				077F5E4F02F3DF754D2FB01A /* Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -351,6 +355,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EC6B79191B6669DB002478A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $SRCROOT/../Scripts/xcode_build_step_parse_header.py;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,6 +377,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				EC6B791B1B666D3A002478A9 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
