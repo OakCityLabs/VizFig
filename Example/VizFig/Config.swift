@@ -26,6 +26,7 @@ class Configuration {
     static let mediumFont = Configuration.fontWithSize(15)
     static let bigFont = Configuration.fontWithSize(22)
     static let boringFont = UIFont.systemFontOfSize(19)
+    static let fooFont = UIFont.systemFontOfSize(19)
     
     static let catchPhraseString = "Spoon!"
     static let versionString: String = {
