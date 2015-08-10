@@ -1,11 +1,11 @@
-class BaseConfigView: UIView {
+public class BaseConfigView: UIView {
 
-    override var frame: CGRect {
+    public override var frame: CGRect {
         get {return CGRectZero }
         set {super.frame = CGRectZero}
     }
     
-    required init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         postInit()
     }
@@ -22,7 +22,7 @@ class BaseConfigView: UIView {
     }
     
     
-    func fonterize(font: UIFont, items: [AnyObject]?) {
+    public func fonterize(font: UIFont, items: [AnyObject]?) {
         if let items = items {
             for item in items {
                 switch item {
@@ -40,7 +40,7 @@ class BaseConfigView: UIView {
         }
     }
     
-    func colorize(color: UIColor, items: [AnyObject]?) {
+    public func colorize(color: UIColor, items: [AnyObject]?) {
         if let items = items {
             for item in items {
                 switch item {
@@ -64,7 +64,7 @@ class BaseConfigView: UIView {
         }
     }
     
-    func bgColorize(color: UIColor, items: [AnyObject]?) {
+    public func bgColorize(color: UIColor, items: [AnyObject]?) {
         if let items = items {
             for item in items {
                 switch item {
@@ -75,6 +75,10 @@ class BaseConfigView: UIView {
                 }
             }
         }
+    }
+    
+    public func stringify(string: String, items: [AnyObject]?) {
+        
     }
 
 }
