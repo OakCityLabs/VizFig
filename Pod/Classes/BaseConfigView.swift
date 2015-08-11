@@ -1,10 +1,21 @@
-public class BaseConfigView: UIView {
+#if os(iOS)
+    public typealias BaseView = UIView
+    public typealias Color = UIColor
+    public typealias Font = UIFont
+#else
+    //OSX
+    public typealias BaseView = NSView
+    public typealias Color = NSColor
+    public typealias Font = NSFont
+#endif
+
+public class BaseConfigView: BaseView {
 
     // Keep track of objects acted on to make sure nothing gets doulbe styled
-    var fontified = [UIFont: AnyObject]()
-    var colorized = [UIColor: AnyObject]()
-    var bgColorized = [UIColor: AnyObject]()
-    var stringified = [String: AnyObject]()
+    var fontified = [AnyObject]()
+    var colorized = [AnyObject]()
+    var bgColorized = [AnyObject]()
+    var stringified = [AnyObject]()
     
     public override var frame: CGRect {
         get {return CGRectZero }
@@ -27,12 +38,22 @@ public class BaseConfigView: UIView {
         self.backgroundColor = UIColor.clearColor()
     }
     
-    public func fonterize(font: UIFont, items: [AnyObject]?) {
+    private func checkBucket(inout bucket: [AnyObject], object: AnyObject) {
+        //FIXME:  What if this called more than once on the same object?
+        
+        let doesContain = bucket.reduce(false){ accum, item in
+            return accum || (item === object)
+        }
+        
+        if doesContain {
+            assertionFailure("Duplicate stylization for object: \(object)")
+        }
+        bucket.append(object)
+    }
+    
+    public func fonterize(font: Font, items: [AnyObject]?) {
         items?.map{ item in
-            if let targetItem = fontified[font] where targetItem !== item {
-//                assertionFailure("Duplicate fonterize call for object:\(item)")
-            }
-            fontified[font] = item
+            checkBucket(&fontified, object: item)
             
             switch item {
             case let item as VizFigable:
@@ -45,12 +66,9 @@ public class BaseConfigView: UIView {
         }
     }
 
-    public func colorize(color: UIColor, items: [AnyObject]?) {
+    public func colorize(color: Color, items: [AnyObject]?) {
         items?.map{ item in
-            if let targetItem = colorized[color] where targetItem !== item {
-//                assertionFailure("Duplicate colorize call for object:\(item)")
-            }
-            colorized[color] = item
+            checkBucket(&colorized, object: item)
 
             switch item {
             case let item as VizFigable:
@@ -63,12 +81,9 @@ public class BaseConfigView: UIView {
         }
     }
 
-    public func bgColorize(color: UIColor, items: [AnyObject]?) {
+    public func bgColorize(color: Color, items: [AnyObject]?) {
         items?.map{ item in
-            if let targetItem = bgColorized[color] where targetItem !== item {
-                //assertionFailure("Duplicate bgColorize call for object:\(item)")
-            }
-            bgColorized[color] = item
+            checkBucket(&bgColorized, object: item)
 
             switch item {
             case let item as VizFigable:
@@ -83,10 +98,7 @@ public class BaseConfigView: UIView {
 
     public func stringify(string: String, items: [AnyObject]?) {
         items?.map{ item in
-            if let targetItem = stringified[string] where targetItem !== item {
-//                assertionFailure("Duplicate stringify call for object:\(item)")
-            }
-            stringified[string] = item
+            checkBucket(&stringified, object: item)
             
             switch item {
             case let item as VizFigable:
@@ -100,6 +112,9 @@ public class BaseConfigView: UIView {
     }
 }
 
+
+#if os(iOS)
+    
 @objc public protocol VizFigable {
     func vizFigFonterize(font: UIFont)
     func vizFigBgColorize(color: UIColor)
@@ -174,3 +189,6 @@ extension UISegmentedControl {
     }
 }
 
+#else       // iOS
+    
+#endif
