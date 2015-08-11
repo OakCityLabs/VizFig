@@ -11,4 +11,5 @@ outputClass = "MagicView"
 
 outputFile = generateConfigViewForClass(inputClass, outputClass)
 
+print "Parsing header file:", objcHeaderFile()
 print "Wrote class to:", outputFile

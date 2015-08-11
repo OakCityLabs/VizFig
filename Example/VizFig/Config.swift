@@ -8,9 +8,9 @@
 
 import UIKit
 
-// Class must be tagged with @objc so that Xcode generates a parseable header file
-@objc
-class Configuration {
+// Config class must be derive from NSObject so that Xcode generates a parseable header file
+
+class Configuration: NSObject {
     
     static let redColor = UIColor.redColor()
     static let blueColor = Configuration.colorForHexValue(0x1122ee)
