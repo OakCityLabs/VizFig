@@ -112,83 +112,102 @@ public class BaseConfigView: BaseView {
     }
 }
 
-
-#if os(iOS)
-    
 @objc public protocol VizFigable {
-    func vizFigFonterize(font: UIFont)
-    func vizFigBgColorize(color: UIColor)
-    func vizFigColorize(color: UIColor)
+    func vizFigFonterize(font: Font)
+    func vizFigBgColorize(color: Color)
+    func vizFigColorize(color: Color)
     func vizFigStringify(string: String)
 }
 
-
 @objc public protocol DefaultVizFigable {
-    func defaultVizFigFonterize(font: UIFont)
-    func defaultVizFigBgColorize(color: UIColor)
-    func defaultVizFigColorize(color: UIColor)
+    func defaultVizFigFonterize(font: Font)
+    func defaultVizFigBgColorize(color: Color)
+    func defaultVizFigColorize(color: Color)
     func defaultVizFigStringify(string: String)
 }
 
-extension UIView: DefaultVizFigable {
-    public func defaultVizFigFonterize(font: UIFont) {
-        // no fonts for UIViews
-    }
-    public func defaultVizFigBgColorize(color: UIColor) {
-        backgroundColor = color
-    }
-    public func defaultVizFigColorize(color: UIColor) {
-        backgroundColor = color
-    }
-    public func defaultVizFigStringify(string: String) {
-        // no string for basic view
-    }
-}
+#if os(iOS)
 
-extension UILabel {
-    public override func defaultVizFigFonterize(font: UIFont) {
-        self.font = font
+    extension UIView: DefaultVizFigable {
+        public func defaultVizFigFonterize(font: UIFont) {
+            // no fonts for UIViews
+        }
+        public func defaultVizFigBgColorize(color: UIColor) {
+            backgroundColor = color
+        }
+        public func defaultVizFigColorize(color: UIColor) {
+            backgroundColor = color
+        }
+        public func defaultVizFigStringify(string: String) {
+            // no string for basic view
+        }
     }
-    public override func defaultVizFigColorize(color: UIColor) {
-        textColor = color
-    }
-    public override func defaultVizFigStringify(string: String) {
-        text = string
-    }
-}
 
-extension UIButton {
-    public override func defaultVizFigFonterize(font: UIFont) {
-        titleLabel?.font = font
+    extension UILabel {
+        public override func defaultVizFigFonterize(font: UIFont) {
+            self.font = font
+        }
+        public override func defaultVizFigColorize(color: UIColor) {
+            textColor = color
+        }
+        public override func defaultVizFigStringify(string: String) {
+            text = string
+        }
     }
-    public override func defaultVizFigColorize(color: UIColor) {
-        setTitleColor(color, forState: .Highlighted)
-        setTitleColor(color, forState: .Normal)
-    }
-    public override func defaultVizFigStringify(string: String) {
-        setTitle(string, forState: .Highlighted)
-        setTitle(string, forState: .Normal)
-    }
-}
 
-extension UISegmentedControl {
-    
-    private func updateTitleTextAttrs(attrName: String, value: AnyObject, state: UIControlState) {
-            var attrs = titleTextAttributesForState(state) ?? [NSObject: AnyObject]()
-            attrs[NSString(string:attrName)] = value
-            setTitleTextAttributes(attrs, forState: state)
+    extension UIButton {
+        public override func defaultVizFigFonterize(font: UIFont) {
+            titleLabel?.font = font
+        }
+        public override func defaultVizFigColorize(color: UIColor) {
+            setTitleColor(color, forState: .Highlighted)
+            setTitleColor(color, forState: .Normal)
+        }
+        public override func defaultVizFigStringify(string: String) {
+            setTitle(string, forState: .Highlighted)
+            setTitle(string, forState: .Normal)
+        }
     }
-    
-    public override func defaultVizFigFonterize(font: UIFont) {
-        updateTitleTextAttrs(NSFontAttributeName, value: font, state: .Normal)
-        updateTitleTextAttrs(NSFontAttributeName, value: font, state: .Highlighted)
-    }
-    public override func defaultVizFigColorize(color: UIColor) {
-        updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: .Normal)
-        updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: .Highlighted)
-    }
-}
 
-#else       // iOS
+    extension UISegmentedControl {
+        
+        private func updateTitleTextAttrs(attrName: String, value: AnyObject, state: UIControlState) {
+                var attrs = titleTextAttributesForState(state) ?? [NSObject: AnyObject]()
+                attrs[NSString(string:attrName)] = value
+                setTitleTextAttributes(attrs, forState: state)
+        }
+        
+        public override func defaultVizFigFonterize(font: UIFont) {
+            updateTitleTextAttrs(NSFontAttributeName, value: font, state: .Normal)
+            updateTitleTextAttrs(NSFontAttributeName, value: font, state: .Highlighted)
+        }
+        public override func defaultVizFigColorize(color: UIColor) {
+            updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: .Normal)
+            updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: .Highlighted)
+        }
+    }
+
+#else
+    // OS X
+    extension NSView: DefaultVizFigable {
+        
+        private func setBackgroundColor(color: NSColor){
+            wantsLayer = true
+            layer.backgroundColor = color.CGColor
+        }
+        
+        public func defaultVizFigFonterize(font: NSFont) {
+            // no fonts for UIViews
+        }
+        public func defaultVizFigBgColorize(color: NSColor) {
+            setBackgroundColor(color)
+        }
+        public func defaultVizFigColorize(color: NSColor) {
+            setBackgroundColor(color)
+        }
+        public func defaultVizFigStringify(string: String) {
+            // no string for basic view
+        }
+    }
     
 #endif
