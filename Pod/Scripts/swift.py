@@ -138,10 +138,12 @@ collectionTemplate = """    @IBOutlet var %(collectionName)s: [%(baseViewClass)s
         } 
     }"""
 
+def targetFileName(targetClassName):
+    filename = "%s.swift" % targetClassName
+    return os.path.join(sourceFileDir(), filename)
 
 def writeClassToFile(classTxt, className):
-    filename = "%s.swift" % className
-    fullpath = os.path.join(sourceFileDir(), filename)
+    fullpath = targetFileName(className)
     
     with open(fullpath,'w') as f:
         f.write(classTxt)

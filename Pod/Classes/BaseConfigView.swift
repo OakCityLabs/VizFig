@@ -35,7 +35,7 @@ public class BaseConfigView: BaseView {
     func postInit() {
         // Hide!
         self.frame = CGRectMake(0, 0, 0, 0)
-        self.backgroundColor = UIColor.clearColor()
+        //self.backgroundColor = Color.clearColor()
     }
     
     private func checkBucket(inout bucket: [AnyObject], object: AnyObject) {
@@ -193,7 +193,7 @@ public class BaseConfigView: BaseView {
         
         private func setBackgroundColor(color: NSColor){
             wantsLayer = true
-            layer.backgroundColor = color.CGColor
+            layer?.backgroundColor = color.CGColor
         }
         
         public func defaultVizFigFonterize(font: NSFont) {
@@ -209,5 +209,20 @@ public class BaseConfigView: BaseView {
             // no string for basic view
         }
     }
-    
+
+    extension NSTextField {
+        
+        public override func defaultVizFigFonterize(font: NSFont) {
+            cell?.font = font
+        }
+        public override func defaultVizFigColorize(color: NSColor) {
+            if let textFieldCell = cell as? NSTextFieldCell {
+                textFieldCell.textColor = color
+            }
+        }
+        public override func defaultVizFigStringify(string: String) {
+            cell?.title = string
+        }
+    }
+
 #endif

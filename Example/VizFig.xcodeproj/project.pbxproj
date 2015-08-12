@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D947BFEA861BC5ECDBAB8BB /* Pods_VizFigExampleOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A60598EA57DC61E4668AB53 /* Pods_VizFigExampleOSX.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -18,6 +19,14 @@
 		EC2EE8C71B691A2200A8CC37 /* VizFig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EE8C61B691A2200A8CC37 /* VizFig.framework */; };
 		EC69A5521B685A3400A5169A /* MagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC69A5511B685A3400A5169A /* MagicView.swift */; };
 		EC6B791B1B666D3A002478A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B791A1B666D3A002478A9 /* Config.swift */; };
+		ECC1C5F81B7AC47900407F92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C5F71B7AC47900407F92 /* AppDelegate.swift */; };
+		ECC1C5FA1B7AC47900407F92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C5F91B7AC47900407F92 /* ViewController.swift */; };
+		ECC1C5FC1B7AC47900407F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1C5FB1B7AC47900407F92 /* Assets.xcassets */; };
+		ECC1C5FF1B7AC47900407F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1C5FD1B7AC47900407F92 /* Main.storyboard */; };
+		ECC1C60A1B7AC47900407F92 /* VizFigExampleOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C6091B7AC47900407F92 /* VizFigExampleOSXTests.swift */; };
+		ECC1C6151B7AC47900407F92 /* VizFigExampleOSXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C6141B7AC47900407F92 /* VizFigExampleOSXUITests.swift */; };
+		ECC1C6221B7AC81800407F92 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C6211B7AC81800407F92 /* Config.swift */; };
+		ECC1C6241B7AC8A800407F92 /* MagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C6231B7AC8A800407F92 /* MagicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +37,27 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = VizFig;
 		};
+		ECC1C6061B7AC47900407F92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC1C5F41B7AC47900407F92;
+			remoteInfo = VizFigExampleOSX;
+		};
+		ECC1C6111B7AC47900407F92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC1C5F41B7AC47900407F92;
+			remoteInfo = VizFigExampleOSX;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0005B4FF05D1D65BF1D8AC55 /* Pods-VizFigExampleOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.debug.xcconfig"; sourceTree = "<group>"; };
+		2BC8C409C3AC1F81F8BC5AA0 /* Pods-VizFigExampleOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.release.xcconfig"; sourceTree = "<group>"; };
 		2DDCF81777B83A73E65AB53A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3A60598EA57DC61E4668AB53 /* Pods_VizFigExampleOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VizFigExampleOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47ABFAA993DBA7996DED6B54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* VizFig_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizFig_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +79,20 @@
 		EC2EE8C61B691A2200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "../../../Library/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator/VizFig.framework"; sourceTree = "<group>"; };
 		EC69A5511B685A3400A5169A /* MagicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicView.swift; sourceTree = "<group>"; };
 		EC6B791A1B666D3A002478A9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ECC1C5F51B7AC47900407F92 /* VizFigExampleOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizFigExampleOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1C5F71B7AC47900407F92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECC1C5F91B7AC47900407F92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECC1C5FB1B7AC47900407F92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECC1C5FE1B7AC47900407F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECC1C6001B7AC47900407F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC1C6051B7AC47900407F92 /* VizFigExampleOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizFigExampleOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1C6091B7AC47900407F92 /* VizFigExampleOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizFigExampleOSXTests.swift; sourceTree = "<group>"; };
+		ECC1C60B1B7AC47900407F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC1C6101B7AC47900407F92 /* VizFigExampleOSXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizFigExampleOSXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1C6141B7AC47900407F92 /* VizFigExampleOSXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizFigExampleOSXUITests.swift; sourceTree = "<group>"; };
+		ECC1C6161B7AC47900407F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC1C6211B7AC81800407F92 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ECC1C6231B7AC8A800407F92 /* MagicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicView.swift; sourceTree = "<group>"; };
 		F0531B1758E126E026D97342 /* Pods-VizFig_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +114,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECC1C5F21B7AC47900407F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D947BFEA861BC5ECDBAB8BB /* Pods_VizFigExampleOSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C6021B7AC47900407F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C60D1B7AC47900407F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +145,9 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for VizFig */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				ECC1C5F61B7AC47900407F92 /* VizFigExampleOSX */,
+				ECC1C6081B7AC47900407F92 /* VizFigExampleOSXTests */,
+				ECC1C6131B7AC47900407F92 /* VizFigExampleOSXUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				E08EA0E7BD7E9C8CCB1DF716 /* Pods */,
 				DAE288ABA881F54DCE2A441D /* Frameworks */,
@@ -94,6 +159,9 @@
 			children = (
 				607FACD01AFB9204008FA782 /* VizFig_Example.app */,
 				607FACE51AFB9204008FA782 /* VizFig_Tests.xctest */,
+				ECC1C5F51B7AC47900407F92 /* VizFigExampleOSX.app */,
+				ECC1C6051B7AC47900407F92 /* VizFigExampleOSXTests.xctest */,
+				ECC1C6101B7AC47900407F92 /* VizFigExampleOSXUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +224,7 @@
 				EC2EE8C41B6919F200A8CC37 /* VizFig.framework */,
 				EC2EE8C21B69142C00A8CC37 /* Pods_VizFig_Tests.framework */,
 				EC2EE8C01B69140100A8CC37 /* Pods_VizFig_Example.framework */,
+				3A60598EA57DC61E4668AB53 /* Pods_VizFigExampleOSX.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,8 +236,42 @@
 				F0531B1758E126E026D97342 /* Pods-VizFig_Example.release.xcconfig */,
 				E7EC88CCBC7E96E1EF4FB470 /* Pods-VizFig_Tests.debug.xcconfig */,
 				98231A196C88C784D0443218 /* Pods-VizFig_Tests.release.xcconfig */,
+				0005B4FF05D1D65BF1D8AC55 /* Pods-VizFigExampleOSX.debug.xcconfig */,
+				2BC8C409C3AC1F81F8BC5AA0 /* Pods-VizFigExampleOSX.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECC1C5F61B7AC47900407F92 /* VizFigExampleOSX */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1C6231B7AC8A800407F92 /* MagicView.swift */,
+				ECC1C5F71B7AC47900407F92 /* AppDelegate.swift */,
+				ECC1C5F91B7AC47900407F92 /* ViewController.swift */,
+				ECC1C5FB1B7AC47900407F92 /* Assets.xcassets */,
+				ECC1C5FD1B7AC47900407F92 /* Main.storyboard */,
+				ECC1C6001B7AC47900407F92 /* Info.plist */,
+				ECC1C6211B7AC81800407F92 /* Config.swift */,
+			);
+			path = VizFigExampleOSX;
+			sourceTree = "<group>";
+		};
+		ECC1C6081B7AC47900407F92 /* VizFigExampleOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1C6091B7AC47900407F92 /* VizFigExampleOSXTests.swift */,
+				ECC1C60B1B7AC47900407F92 /* Info.plist */,
+			);
+			path = VizFigExampleOSXTests;
+			sourceTree = "<group>";
+		};
+		ECC1C6131B7AC47900407F92 /* VizFigExampleOSXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1C6141B7AC47900407F92 /* VizFigExampleOSXUITests.swift */,
+				ECC1C6161B7AC47900407F92 /* Info.plist */,
+			);
+			path = VizFigExampleOSXUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +319,63 @@
 			productReference = 607FACE51AFB9204008FA782 /* VizFig_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ECC1C5F41B7AC47900407F92 /* VizFigExampleOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1C61D1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSX" */;
+			buildPhases = (
+				93238A8F106E8E7109E90DE5 /* Check Pods Manifest.lock */,
+				ECC1C5F11B7AC47900407F92 /* Sources */,
+				ECC1C5F21B7AC47900407F92 /* Frameworks */,
+				ECC1C5F31B7AC47900407F92 /* Resources */,
+				ECC1C6201B7AC7F000407F92 /* ShellScript */,
+				C12F2DEAA69FD10176C46E04 /* Embed Pods Frameworks */,
+				2AE87F643023D90E2141C8A8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VizFigExampleOSX;
+			productName = VizFigExampleOSX;
+			productReference = ECC1C5F51B7AC47900407F92 /* VizFigExampleOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC1C6041B7AC47900407F92 /* VizFigExampleOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1C61E1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSXTests" */;
+			buildPhases = (
+				ECC1C6011B7AC47900407F92 /* Sources */,
+				ECC1C6021B7AC47900407F92 /* Frameworks */,
+				ECC1C6031B7AC47900407F92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC1C6071B7AC47900407F92 /* PBXTargetDependency */,
+			);
+			name = VizFigExampleOSXTests;
+			productName = VizFigExampleOSXTests;
+			productReference = ECC1C6051B7AC47900407F92 /* VizFigExampleOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECC1C60F1B7AC47900407F92 /* VizFigExampleOSXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1C61F1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSXUITests" */;
+			buildPhases = (
+				ECC1C60C1B7AC47900407F92 /* Sources */,
+				ECC1C60D1B7AC47900407F92 /* Frameworks */,
+				ECC1C60E1B7AC47900407F92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC1C6121B7AC47900407F92 /* PBXTargetDependency */,
+			);
+			name = VizFigExampleOSXUITests;
+			productName = VizFigExampleOSXUITests;
+			productReference = ECC1C6101B7AC47900407F92 /* VizFigExampleOSXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +394,17 @@
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
+					ECC1C5F41B7AC47900407F92 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					ECC1C6041B7AC47900407F92 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = ECC1C5F41B7AC47900407F92;
+					};
+					ECC1C60F1B7AC47900407F92 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = ECC1C5F41B7AC47900407F92;
+					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "VizFig" */;
@@ -251,6 +422,9 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* VizFig_Example */,
 				607FACE41AFB9204008FA782 /* VizFig_Tests */,
+				ECC1C5F41B7AC47900407F92 /* VizFigExampleOSX */,
+				ECC1C6041B7AC47900407F92 /* VizFigExampleOSXTests */,
+				ECC1C60F1B7AC47900407F92 /* VizFigExampleOSXUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +441,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C5F31B7AC47900407F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1C5FC1B7AC47900407F92 /* Assets.xcassets in Resources */,
+				ECC1C5FF1B7AC47900407F92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C6031B7AC47900407F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C60E1B7AC47900407F92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,6 +503,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2AE87F643023D90E2141C8A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		47199A18665D27BF6016EFCE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +548,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		93238A8F106E8E7109E90DE5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		9D9037C97C72FE591112F309 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +576,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12F2DEAA69FD10176C46E04 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB6D9359B3C563C0003CCE65 /* Embed Pods Frameworks */ = {
@@ -377,7 +619,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = $SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py;
+			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -o MagicView\n";
+		};
+		ECC1C6201B7AC7F000407F92 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -o MagicView\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -401,6 +656,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECC1C5F11B7AC47900407F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1C5FA1B7AC47900407F92 /* ViewController.swift in Sources */,
+				ECC1C5F81B7AC47900407F92 /* AppDelegate.swift in Sources */,
+				ECC1C6241B7AC8A800407F92 /* MagicView.swift in Sources */,
+				ECC1C6221B7AC81800407F92 /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C6011B7AC47900407F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1C60A1B7AC47900407F92 /* VizFigExampleOSXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1C60C1B7AC47900407F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1C6151B7AC47900407F92 /* VizFigExampleOSXUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -408,6 +690,16 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* VizFig_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		ECC1C6071B7AC47900407F92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC1C5F41B7AC47900407F92 /* VizFigExampleOSX */;
+			targetProxy = ECC1C6061B7AC47900407F92 /* PBXContainerItemProxy */;
+		};
+		ECC1C6121B7AC47900407F92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC1C5F41B7AC47900407F92 /* VizFigExampleOSX */;
+			targetProxy = ECC1C6111B7AC47900407F92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -426,6 +718,14 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		ECC1C5FD1B7AC47900407F92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1C5FE1B7AC47900407F92 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -587,6 +887,101 @@
 			};
 			name = Release;
 		};
+		ECC1C6171B7AC47900407F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0005B4FF05D1D65BF1D8AC55 /* Pods-VizFigExampleOSX.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = VizFigExampleOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.VizFigExampleOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ECC1C6181B7AC47900407F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC8C409C3AC1F81F8BC5AA0 /* Pods-VizFigExampleOSX.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VizFigExampleOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.VizFigExampleOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ECC1C6191B7AC47900407F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = VizFigExampleOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.VizFigExampleOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizFigExampleOSX.app/Contents/MacOS/VizFigExampleOSX";
+			};
+			name = Debug;
+		};
+		ECC1C61A1B7AC47900407F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VizFigExampleOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.VizFigExampleOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizFigExampleOSX.app/Contents/MacOS/VizFigExampleOSX";
+			};
+			name = Release;
+		};
+		ECC1C61B1B7AC47900407F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = VizFigExampleOSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.VizFigExampleOSXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = VizFigExampleOSX;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ECC1C61C1B7AC47900407F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VizFigExampleOSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.VizFigExampleOSXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = VizFigExampleOSX;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -613,6 +1008,33 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1C61D1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1C6171B7AC47900407F92 /* Debug */,
+				ECC1C6181B7AC47900407F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1C61E1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1C6191B7AC47900407F92 /* Debug */,
+				ECC1C61A1B7AC47900407F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1C61F1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1C61B1B7AC47900407F92 /* Debug */,
+				ECC1C61C1B7AC47900407F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
