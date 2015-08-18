@@ -4,6 +4,11 @@ import argparse
 import sys
 from swift import *
 
+#
+#  FIXME:  Don't parse the generated header, user the AST dump instead
+#     env DEVELOPER_DIR=/Applications/Xcode7-beta5.app/Contents/Developer  xcrun -sdk iphonesimulator  swiftc -print-ast  Config.swift
+#
+
 # print "Hello World!"
 # print "Swift module name:", swiftModuleName()
 # print "ObjectiveC header file:", objcHeaderFile()
