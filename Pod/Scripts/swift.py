@@ -16,27 +16,17 @@ if isMacOSX():
     attributeClasses = {
         'NSFont': ['fonterize'],
         'NSString': ['stringify'],
+        'String': ['stringify'],
         'NSColor': ['colorize', 'bgColorize'],
     }
 else: 
     attributeClasses = {
         'UIFont': ['fonterize'],
         'NSString': ['stringify'],
+        'String': ['stringify'],
         'UIColor': ['colorize', 'bgColorize'],
     }
-        
-def swiftModuleName():
-    return os.environ.get("PRODUCT_MODULE_NAME","UnknownModule")
     
-def swiftHeaderFilename():
-    return "%s-Swift.h" % swiftModuleName()
-    
-def derivedSourcesDir():
-    return os.environ.get("DERIVED_SOURCES_DIR","Unknown")
-    
-def objcHeaderFile():
-    return os.path.join(derivedSourcesDir(), swiftHeaderFilename())
-
 def sourceFileDir():
     try:
         plistPath = os.environ["PRODUCT_SETTINGS_PATH"]
@@ -66,38 +56,34 @@ def getAstLines(className, swiftPrefix):
     shortFile = "%s.swift" % swiftPrefix
     swiftFile = os.path.join(sourceFileDir(), shortFile)
 
-    cmd = "env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcrun -sdk iphonesimulator swiftc -print-ast %s" % swiftFile
-    lines = doCmd(cmd)
+    sdk = os.environ.get("PLATFORM_NAME", "Unknown")
+    #cmd = "env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcrun -sdk %s swiftc -print-ast %s" % (sdk, swiftFile)
+    cmd = "xcrun -sdk %s swiftc -print-ast %s" % (sdk, swiftFile)
+    header = doCmd(cmd)
     
-    return lines.split('\n')
-
-def headerLines(className):
-    moduleName = swiftModuleName()
-    configClassHeaderLines = []
-
-    with open(objcHeaderFile()) as f:
-        data = f.read()
-        foundClass = False
-        
-        # Class declarations look like: SWIFT_CLASS("_TtC14VizFig_Example13Configuration")
-        pattern = re.compile("""SWIFT_CLASS\(.*%s.*%s.*\)""" % (moduleName, className))
-        
-        for line in data.split('\n'):
-            if foundClass and line.startswith("SWIFT_CLASS("):
-                foundClass = False        
-
-            if foundClass and line.startswith("+"):
-                configClassHeaderLines.append(line)
-        
-            if pattern.match(line):
-                foundClass = True
-
-    return configClassHeaderLines            
+    return header
     
 def configurationAttributes(className, classFile):
-    #lines = headerLines(className)
-    lines = getAstLines(className, classFile)
-    print "foo:", len(lines)
+    header = getAstLines(className, classFile)
+    
+    classes = header.split("}")
+    configClass = None
+    for c in classes:
+        try:
+            (prefix, classtxt) = c.split("{")
+        except ValueError,e:
+            prefix = ""
+            classtxt = ""
+        prefix = prefix.replace(" ","")
+        if prefix.endswith( "class%s" % className):
+            configClass = classtxt
+        
+    if configClass == None:
+        raise("Can't find config class")
+        
+        
+    lines = configClass.split("\n")
+    
     #print "Found header %s header lines", len(lines)
     #print "Found header block:\n"
     #for line in lines:
@@ -107,15 +93,14 @@ def configurationAttributes(className, classFile):
     for aClass in attributeClasses.keys():
         configAttrs[aClass] = []
         for line in lines:
-            print "parse line:", line
             if not line.startswith("  class"): continue
             if line.find(": %s" % aClass) > -1:
                 (dummy, attrName) = line.split("let")
-                print "attrName:", attrName
-                attrName = attrName.replace(aClass,"")
+                #print "attrName:", attrName
+                attrName = attrName[:-1 * len(aClass)]  # strip class name off end of line
                 attrName = attrName.replace(":","")
                 attrName = attrName.replace(" ","")
-                print "attrName: <%s>" % attrName
+                #print "attrName: <%s>" % attrName
                 configAttrs[aClass].append(attrName)
         
     return configAttrs

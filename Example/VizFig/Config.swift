@@ -8,9 +8,15 @@
 
 import UIKit
 
-// Config class must be derive from NSObject so that Xcode generates a parseable header file
+class BogusConfiguration {
+    
+    static let bogusRedColor = UIColor.redColor()
+    static let bogusBlueColor = Configuration.colorForHexValue(0x1122ee)
+    static let bogusFont = Configuration.fontWithSize(15)
+    static let bogusString = "Bogus"
+}
 
-class Configuration: NSObject {
+class Configuration {
     
     static let redColor = UIColor.redColor()
     static let blueColor = Configuration.colorForHexValue(0x1122ee)
@@ -47,4 +53,12 @@ class Configuration: NSObject {
         let color = UIColor(red: CGFloat(red)/256.0, green: CGFloat(green)/256.0, blue: CGFloat(blue)/256.0, alpha: CGFloat(1.0))
         return color
     }
+}
+
+class AlsoBogusConfiguration {
+    
+    static let alsoBogusRedColor = UIColor.redColor()
+    static let alsoBogusBlueColor = Configuration.colorForHexValue(0x1122ee)
+    static let alsoBogusFont = Configuration.fontWithSize(15)
+    static let alsoBogusString = "Bogus"
 }
