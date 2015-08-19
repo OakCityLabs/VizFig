@@ -1,6 +1,8 @@
 import os
 import re
 import datetime
+import subprocess
+import sys
 
 # Are we building for MacOSX as opposed to iOS
 def isMacOSX():
@@ -43,6 +45,32 @@ def sourceFileDir():
     except:
         return "/tmp"
 
+def doCmd(cmd, extraEnv=None):
+    print "Executing cmd:", cmd
+    e = None
+    if extraEnv:
+        print "Adding env variables:", extraEnv
+        e = os.environ
+        e.update(extraEnv)
+    try:
+        proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=e)
+        output, err = proc.communicate()
+    except subprocess.CalledProcessError, e:
+        print "Error output:", e.output
+        raise(e)
+    if err != "":
+        print "Standard Error:", err
+    return output.strip()
+
+def getAstLines(className, swiftPrefix):
+    shortFile = "%s.swift" % swiftPrefix
+    swiftFile = os.path.join(sourceFileDir(), shortFile)
+
+    cmd = "env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcrun -sdk iphonesimulator swiftc -print-ast %s" % swiftFile
+    lines = doCmd(cmd)
+    
+    return lines.split('\n')
+
 def headerLines(className):
     moduleName = swiftModuleName()
     configClassHeaderLines = []
@@ -66,8 +94,10 @@ def headerLines(className):
 
     return configClassHeaderLines            
     
-def configurationAttributes(className):
-    lines = headerLines(className)
+def configurationAttributes(className, classFile):
+    #lines = headerLines(className)
+    lines = getAstLines(className, classFile)
+    print "foo:", len(lines)
     #print "Found header %s header lines", len(lines)
     #print "Found header block:\n"
     #for line in lines:
@@ -77,9 +107,15 @@ def configurationAttributes(className):
     for aClass in attributeClasses.keys():
         configAttrs[aClass] = []
         for line in lines:
-            if line.find("+ (%s *" % aClass) > -1:
-                (dummy, attrName) = line.split(")")
-                attrName = attrName.replace(";","")
+            print "parse line:", line
+            if not line.startswith("  class"): continue
+            if line.find(": %s" % aClass) > -1:
+                (dummy, attrName) = line.split("let")
+                print "attrName:", attrName
+                attrName = attrName.replace(aClass,"")
+                attrName = attrName.replace(":","")
+                attrName = attrName.replace(" ","")
+                print "attrName: <%s>" % attrName
                 configAttrs[aClass].append(attrName)
         
     return configAttrs
@@ -150,8 +186,8 @@ def writeClassToFile(classTxt, className):
     
     return fullpath    
     
-def generateConfigViewForClass(inputClass, outputClass = "ConfigView"):
-    attrs = configurationAttributes(inputClass)
+def generateConfigViewForClass(inputClass, inputFile, outputClass = "ConfigView"):
+    attrs = configurationAttributes(inputClass, inputFile)
     classTxt = generateConfigViewClass(attrs, inputClass, outputClass)
     newFile = writeClassToFile(classTxt, outputClass)
     return newFile

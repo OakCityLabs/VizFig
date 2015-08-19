@@ -619,7 +619,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -o MagicView\n";
+			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -f Config -o MagicView\n";
 		};
 		ECC1C6201B7AC7F000407F92 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -632,7 +632,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -o MagicView\n";
+			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -f Config -o MagicView\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
