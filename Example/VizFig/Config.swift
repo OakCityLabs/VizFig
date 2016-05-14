@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BogusConfiguration {
+enum BogusConfiguration {
     
     static let bogusRedColor = UIColor.redColor()
     static let bogusBlueColor = Configuration.colorForHexValue(0x1122ee)
@@ -16,7 +16,7 @@ class BogusConfiguration {
     static let bogusString = "Bogus"
 }
 
-class Configuration {
+enum Configuration {
     
     static let redColor = UIColor.redColor()
     static let blueColor = Configuration.colorForHexValue(0x1122ee)
@@ -42,11 +42,11 @@ class Configuration {
     }()
     
     
-    private class func fontWithSize(size: Int) -> UIFont {
+    private static func fontWithSize(size: Int) -> UIFont {
         return UIFont(name: "ChalkboardSE-Regular", size: CGFloat(size))!
     }
     
-    private class func colorForHexValue(colorHex: Int) -> UIColor {
+    private static func colorForHexValue(colorHex: Int) -> UIColor {
         let red =   (colorHex & 0xff0000) >> 16
         let green = (colorHex & 0x00ff00) >> 8
         let blue  = colorHex & 0x0000ff
@@ -55,7 +55,7 @@ class Configuration {
     }
 }
 
-class AlsoBogusConfiguration {
+enum AlsoBogusConfiguration {
     
     static let alsoBogusRedColor = UIColor.redColor()
     static let alsoBogusBlueColor = Configuration.colorForHexValue(0x1122ee)

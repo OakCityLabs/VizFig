@@ -31,14 +31,10 @@ public class BaseConfigView: BaseView {
         super.init(frame: frame)
         postInit()
     }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     func postInit() {
         // Hide!
-        self.frame = CGRectMake(0, 0, 0, 0)
+        frame = CGRectMake(0, 0, 0, 0)
         //self.backgroundColor = Color.clearColor()
     }
     

@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D947BFEA861BC5ECDBAB8BB /* Pods_VizFigExampleOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A60598EA57DC61E4668AB53 /* Pods_VizFigExampleOSX.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E42216322F1F29A1116AF7C /* Pods_VizFig_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB47A314CF37901AD9A2674 /* Pods_VizFig_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		EC2EE8C11B69140100A8CC37 /* Pods_VizFig_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EE8C01B69140100A8CC37 /* Pods_VizFig_Example.framework */; };
-		EC2EE8C31B69142C00A8CC37 /* Pods_VizFig_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EE8C21B69142C00A8CC37 /* Pods_VizFig_Tests.framework */; };
+		9E91CCE73E2D1653A9DC58EB /* Pods_VizFig_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1902BF566FB28FDD01619E3A /* Pods_VizFig_Example.framework */; };
+		C94852E04F8F2A2FDDCE3645 /* Pods_VizFigExampleOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C71C6763C7C7278550CBC8D /* Pods_VizFigExampleOSX.framework */; };
 		EC2EE8C71B691A2200A8CC37 /* VizFig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EE8C61B691A2200A8CC37 /* VizFig.framework */; };
+		EC5265601CE7DD0C00C036CC /* swift.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655E1CE7DD0C00C036CC /* swift.py */; };
+		EC5265611CE7DD0C00C036CC /* xcode_build_step_parse_header.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */; };
 		EC69A5521B685A3400A5169A /* MagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC69A5511B685A3400A5169A /* MagicView.swift */; };
 		EC6B791B1B666D3A002478A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B791A1B666D3A002478A9 /* Config.swift */; };
 		ECC1C5F81B7AC47900407F92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C5F71B7AC47900407F92 /* AppDelegate.swift */; };
@@ -54,11 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0005B4FF05D1D65BF1D8AC55 /* Pods-VizFigExampleOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.debug.xcconfig"; sourceTree = "<group>"; };
-		2BC8C409C3AC1F81F8BC5AA0 /* Pods-VizFigExampleOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.release.xcconfig"; sourceTree = "<group>"; };
+		0FA8288B78B1C550D0B9EB5D /* Pods-VizFigExampleOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.release.xcconfig"; sourceTree = "<group>"; };
+		1902BF566FB28FDD01619E3A /* Pods_VizFig_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VizFig_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDCF81777B83A73E65AB53A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		3A60598EA57DC61E4668AB53 /* Pods_VizFigExampleOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VizFigExampleOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47ABFAA993DBA7996DED6B54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5896CFEEBAFA3E7BE1FA3D7B /* Pods-VizFig_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* VizFig_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizFig_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,14 +71,17 @@
 		607FACE51AFB9204008FA782 /* VizFig_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizFig_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		798D95A978C94BF60058A72F /* Pods-VizFig_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6C71C6763C7C7278550CBC8D /* Pods_VizFigExampleOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VizFigExampleOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB47A314CF37901AD9A2674 /* Pods_VizFig_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VizFig_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71FD98C1D079841EFB8B3637 /* Pods-VizFig_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93710C8343C0D77FB33988D5 /* VizFig.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VizFig.podspec; path = ../VizFig.podspec; sourceTree = "<group>"; };
-		98231A196C88C784D0443218 /* Pods-VizFig_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E7EC88CCBC7E96E1EF4FB470 /* Pods-VizFig_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC2EE8C01B69140100A8CC37 /* Pods_VizFig_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_VizFig_Example.framework; path = "../../../Library/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator/Pods_VizFig_Example.framework"; sourceTree = "<group>"; };
-		EC2EE8C21B69142C00A8CC37 /* Pods_VizFig_Tests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_VizFig_Tests.framework; path = "../../../Library/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator/Pods_VizFig_Tests.framework"; sourceTree = "<group>"; };
+		AC35305B6E8035126ECD73E8 /* Pods-VizFigExampleOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.debug.xcconfig"; sourceTree = "<group>"; };
+		D9BA23E2C343E739FC998593 /* Pods-VizFig_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DDF75A63F02F78D1FD834C66 /* Pods-VizFig_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2EE8C41B6919F200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "Pods/../build/Debug-iphoneos/VizFig.framework"; sourceTree = "<group>"; };
 		EC2EE8C61B691A2200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "../../../Library/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator/VizFig.framework"; sourceTree = "<group>"; };
+		EC52655E1CE7DD0C00C036CC /* swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = swift.py; path = ../Pod/Scripts/swift.py; sourceTree = "<group>"; };
+		EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = xcode_build_step_parse_header.py; path = ../Pod/Scripts/xcode_build_step_parse_header.py; sourceTree = "<group>"; };
 		EC69A5511B685A3400A5169A /* MagicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicView.swift; sourceTree = "<group>"; };
 		EC6B791A1B666D3A002478A9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ECC1C5F51B7AC47900407F92 /* VizFigExampleOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizFigExampleOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +98,6 @@
 		ECC1C6161B7AC47900407F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC1C6211B7AC81800407F92 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ECC1C6231B7AC8A800407F92 /* MagicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicView.swift; sourceTree = "<group>"; };
-		F0531B1758E126E026D97342 /* Pods-VizFig_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2EE8C71B691A2200A8CC37 /* VizFig.framework in Frameworks */,
-				EC2EE8C11B69140100A8CC37 /* Pods_VizFig_Example.framework in Frameworks */,
+				9E91CCE73E2D1653A9DC58EB /* Pods_VizFig_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2EE8C31B69142C00A8CC37 /* Pods_VizFig_Tests.framework in Frameworks */,
+				4E42216322F1F29A1116AF7C /* Pods_VizFig_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D947BFEA861BC5ECDBAB8BB /* Pods_VizFigExampleOSX.framework in Frameworks */,
+				C94852E04F8F2A2FDDCE3645 /* Pods_VizFigExampleOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +146,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				EC52655D1CE7DCE800C036CC /* VizFig Scripts */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for VizFig */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -149,8 +154,8 @@
 				ECC1C6081B7AC47900407F92 /* VizFigExampleOSXTests */,
 				ECC1C6131B7AC47900407F92 /* VizFigExampleOSXUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				E08EA0E7BD7E9C8CCB1DF716 /* Pods */,
 				DAE288ABA881F54DCE2A441D /* Frameworks */,
+				A61DF49CA67E94C21A98C87D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,29 +222,38 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		A61DF49CA67E94C21A98C87D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC35305B6E8035126ECD73E8 /* Pods-VizFigExampleOSX.debug.xcconfig */,
+				0FA8288B78B1C550D0B9EB5D /* Pods-VizFigExampleOSX.release.xcconfig */,
+				71FD98C1D079841EFB8B3637 /* Pods-VizFig_Example.debug.xcconfig */,
+				5896CFEEBAFA3E7BE1FA3D7B /* Pods-VizFig_Example.release.xcconfig */,
+				DDF75A63F02F78D1FD834C66 /* Pods-VizFig_Tests.debug.xcconfig */,
+				D9BA23E2C343E739FC998593 /* Pods-VizFig_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DAE288ABA881F54DCE2A441D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				EC2EE8C61B691A2200A8CC37 /* VizFig.framework */,
 				EC2EE8C41B6919F200A8CC37 /* VizFig.framework */,
-				EC2EE8C21B69142C00A8CC37 /* Pods_VizFig_Tests.framework */,
-				EC2EE8C01B69140100A8CC37 /* Pods_VizFig_Example.framework */,
-				3A60598EA57DC61E4668AB53 /* Pods_VizFigExampleOSX.framework */,
+				6C71C6763C7C7278550CBC8D /* Pods_VizFigExampleOSX.framework */,
+				1902BF566FB28FDD01619E3A /* Pods_VizFig_Example.framework */,
+				6DB47A314CF37901AD9A2674 /* Pods_VizFig_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E08EA0E7BD7E9C8CCB1DF716 /* Pods */ = {
+		EC52655D1CE7DCE800C036CC /* VizFig Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				798D95A978C94BF60058A72F /* Pods-VizFig_Example.debug.xcconfig */,
-				F0531B1758E126E026D97342 /* Pods-VizFig_Example.release.xcconfig */,
-				E7EC88CCBC7E96E1EF4FB470 /* Pods-VizFig_Tests.debug.xcconfig */,
-				98231A196C88C784D0443218 /* Pods-VizFig_Tests.release.xcconfig */,
-				0005B4FF05D1D65BF1D8AC55 /* Pods-VizFigExampleOSX.debug.xcconfig */,
-				2BC8C409C3AC1F81F8BC5AA0 /* Pods-VizFigExampleOSX.release.xcconfig */,
+				EC52655E1CE7DD0C00C036CC /* swift.py */,
+				EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */,
 			);
-			name = Pods;
+			name = "VizFig Scripts";
 			sourceTree = "<group>";
 		};
 		ECC1C5F61B7AC47900407F92 /* VizFigExampleOSX */ = {
@@ -281,13 +295,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "VizFig_Example" */;
 			buildPhases = (
-				077F5E4F02F3DF754D2FB01A /* Check Pods Manifest.lock */,
+				2DA4D4E34974AAF5F0344FEB /* 📦 Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				EC6B79191B6669DB002478A9 /* ShellScript */,
-				9D9037C97C72FE591112F309 /* Embed Pods Frameworks */,
-				47199A18665D27BF6016EFCE /* Copy Pods Resources */,
+				5175949AD930A3638B2FD4BC /* 📦 Embed Pods Frameworks */,
+				FCA70986B3E7F417E8194E92 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,12 +316,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "VizFig_Tests" */;
 			buildPhases = (
-				758B61ABD5B33E2A4955C26B /* Check Pods Manifest.lock */,
+				EDD5A4A41EC6039804023073 /* 📦 Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				DB6D9359B3C563C0003CCE65 /* Embed Pods Frameworks */,
-				2A2C2AFC4D20FF4202036E0A /* Copy Pods Resources */,
+				1AA26F06C3A3C2D9E05F2732 /* 📦 Embed Pods Frameworks */,
+				30985C73D7134535D8F398C5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,13 +337,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC1C61D1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSX" */;
 			buildPhases = (
-				93238A8F106E8E7109E90DE5 /* Check Pods Manifest.lock */,
+				D46A82587C07BA8D7F0D7E58 /* 📦 Check Pods Manifest.lock */,
 				ECC1C5F11B7AC47900407F92 /* Sources */,
 				ECC1C5F21B7AC47900407F92 /* Frameworks */,
 				ECC1C5F31B7AC47900407F92 /* Resources */,
 				ECC1C6201B7AC7F000407F92 /* ShellScript */,
-				C12F2DEAA69FD10176C46E04 /* Embed Pods Frameworks */,
-				2AE87F643023D90E2141C8A8 /* Copy Pods Resources */,
+				34BF32625145331CFFA5CDA8 /* 📦 Embed Pods Frameworks */,
+				53C87C9B624C81DA769A5D6B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -434,6 +448,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5265601CE7DD0C00C036CC /* swift.py in Resources */,
+				EC5265611CE7DD0C00C036CC /* xcode_build_step_parse_header.py in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -473,14 +489,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		077F5E4F02F3DF754D2FB01A /* Check Pods Manifest.lock */ = {
+		1AA26F06C3A3C2D9E05F2732 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DA4D4E34974AAF5F0344FEB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,14 +519,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		2A2C2AFC4D20FF4202036E0A /* Copy Pods Resources */ = {
+		30985C73D7134535D8F398C5 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,89 +534,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2AE87F643023D90E2141C8A8 /* Copy Pods Resources */ = {
+		34BF32625145331CFFA5CDA8 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		47199A18665D27BF6016EFCE /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		758B61ABD5B33E2A4955C26B /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		93238A8F106E8E7109E90DE5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9D9037C97C72FE591112F309 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C12F2DEAA69FD10176C46E04 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,19 +549,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB6D9359B3C563C0003CCE65 /* Embed Pods Frameworks */ = {
+		5175949AD930A3638B2FD4BC /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53C87C9B624C81DA769A5D6B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D46A82587C07BA8D7F0D7E58 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EC6B79191B6669DB002478A9 /* ShellScript */ = {
@@ -633,6 +619,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -f Config -o MagicView\n";
+		};
+		EDD5A4A41EC6039804023073 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FCA70986B3E7F417E8194E92 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -815,7 +831,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 798D95A978C94BF60058A72F /* Pods-VizFig_Example.debug.xcconfig */;
+			baseConfigurationReference = 71FD98C1D079841EFB8B3637 /* Pods-VizFig_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -832,7 +848,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0531B1758E126E026D97342 /* Pods-VizFig_Example.release.xcconfig */;
+			baseConfigurationReference = 5896CFEEBAFA3E7BE1FA3D7B /* Pods-VizFig_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -849,11 +865,10 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7EC88CCBC7E96E1EF4FB470 /* Pods-VizFig_Tests.debug.xcconfig */;
+			baseConfigurationReference = DDF75A63F02F78D1FD834C66 /* Pods-VizFig_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator",
 				);
@@ -871,11 +886,10 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98231A196C88C784D0443218 /* Pods-VizFig_Tests.release.xcconfig */;
+			baseConfigurationReference = D9BA23E2C343E739FC998593 /* Pods-VizFig_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator",
 				);
@@ -889,7 +903,7 @@
 		};
 		ECC1C6171B7AC47900407F92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0005B4FF05D1D65BF1D8AC55 /* Pods-VizFigExampleOSX.debug.xcconfig */;
+			baseConfigurationReference = AC35305B6E8035126ECD73E8 /* Pods-VizFigExampleOSX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -906,7 +920,7 @@
 		};
 		ECC1C6181B7AC47900407F92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BC8C409C3AC1F81F8BC5AA0 /* Pods-VizFigExampleOSX.release.xcconfig */;
+			baseConfigurationReference = 0FA8288B78B1C550D0B9EB5D /* Pods-VizFigExampleOSX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";

@@ -61,6 +61,8 @@ def getAstLines(className, swiftPrefix):
     cmd = "xcrun -sdk %s swiftc -print-ast %s" % (sdk, swiftFile)
     header = doCmd(cmd)
     
+#    print "Header:\n", header
+    
     return header
     
 def configurationAttributes(className, classFile):
@@ -75,25 +77,26 @@ def configurationAttributes(className, classFile):
             prefix = ""
             classtxt = ""
         prefix = prefix.replace(" ","")
-        if prefix.endswith( "class%s" % className):
+        print "prefix to test:", prefix
+        if prefix.endswith( "enum%s" % className):
             configClass = classtxt
         
     if configClass == None:
-        raise("Can't find config class")
+        raise(Exception("Can't find config class"))
         
         
     lines = configClass.split("\n")
     
-    #print "Found header %s header lines", len(lines)
-    #print "Found header block:\n"
-    #for line in lines:
-    #    print "\t", line
+#    print "Found header %s header lines", len(lines)
+#    print "Found header block:\n"
+#    for line in lines:
+#        print "\t", line
 
     configAttrs = {}
     for aClass in attributeClasses.keys():
         configAttrs[aClass] = []
         for line in lines:
-            if not line.startswith("  class"): continue
+            if not line.startswith("  static"): continue
             if line.find(": %s" % aClass) > -1:
                 (dummy, attrName) = line.split("let")
                 #print "attrName:", attrName
