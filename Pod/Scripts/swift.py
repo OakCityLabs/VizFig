@@ -68,6 +68,12 @@ def getAstLines(className, swiftPrefix):
 def configurationAttributes(className, classFile):
     header = getAstLines(className, classFile)
     
+    #  Super hacky way of remove getter/setter info that interferes with parsing
+    #  TODO: Parse headers better
+    header = header.replace("{ get }", "")
+    header = header.replace("{ set }", "")
+    header = header.replace("{ get set }", "")
+    
     classes = header.split("}")
     configClass = None
     for c in classes:
