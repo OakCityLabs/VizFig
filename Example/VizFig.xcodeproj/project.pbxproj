@@ -296,10 +296,10 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "VizFig_Example" */;
 			buildPhases = (
 				2DA4D4E34974AAF5F0344FEB /* 📦 Check Pods Manifest.lock */,
+				EC6B79191B6669DB002478A9 /* VizFig */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				EC6B79191B6669DB002478A9 /* ShellScript */,
 				5175949AD930A3638B2FD4BC /* 📦 Embed Pods Frameworks */,
 				FCA70986B3E7F417E8194E92 /* 📦 Copy Pods Resources */,
 			);
@@ -594,13 +594,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EC6B79191B6669DB002478A9 /* ShellScript */ = {
+		EC6B79191B6669DB002478A9 /* VizFig */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = VizFig;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
