@@ -52,7 +52,7 @@ public class BaseConfigView: BaseView {
     }
     
     public func fonterize(font: Font, items: [AnyObject]?) {
-        items?.map{ item in
+        let _ = items?.map{ item in
             checkBucket(&fontified, object: item)
             
             switch item {
@@ -67,7 +67,7 @@ public class BaseConfigView: BaseView {
     }
 
     public func colorize(color: Color, items: [AnyObject]?) {
-        items?.map{ item in
+        let _ = items?.map{ item in
             checkBucket(&colorized, object: item)
 
             switch item {
@@ -82,7 +82,7 @@ public class BaseConfigView: BaseView {
     }
 
     public func bgColorize(color: Color, items: [AnyObject]?) {
-        items?.map{ item in
+        let _ = items?.map{ item in
             checkBucket(&bgColorized, object: item)
 
             switch item {
@@ -97,7 +97,7 @@ public class BaseConfigView: BaseView {
     }
 
     public func stringify(string: String, items: [AnyObject]?) {
-        items?.map{ item in
+        let _ = items?.map{ item in
             checkBucket(&stringified, object: item)
             
             switch item {
@@ -155,6 +155,18 @@ public class BaseConfigView: BaseView {
         }
     }
 
+    extension UITextField {
+        public override func defaultVizFigFonterize(font: UIFont) {
+            self.font = font
+        }
+        public override func defaultVizFigColorize(color: UIColor) {
+            textColor = color
+        }
+        public override func defaultVizFigStringify(string: String) {
+            text = string
+        }
+    }
+    
     extension UIButton {
         public override func defaultVizFigFonterize(font: UIFont) {
             titleLabel?.font = font
