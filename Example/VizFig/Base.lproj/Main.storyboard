@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -68,16 +68,27 @@
                                     <constraint firstAttribute="width" secondItem="zVp-vO-mSZ" secondAttribute="height" id="Dvd-Qm-ELt"/>
                                 </constraints>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyR-hU-zM8">
+                                <rect key="frame" x="20" y="298" width="51" height="31"/>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Od8-3c-9GW">
+                                <rect key="frame" x="75" y="299" width="507" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uJK-tq-KYu" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0XJ-g2-Kif"/>
                             <constraint firstItem="K0G-Nb-BJU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="1C0-dr-0hr"/>
                             <constraint firstItem="uJK-tq-KYu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2hF-zR-viH"/>
+                            <constraint firstItem="Od8-3c-9GW" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="3Ao-aJ-PKD"/>
                             <constraint firstItem="jgA-oA-EZC" firstAttribute="leading" secondItem="6zv-D6-lVP" secondAttribute="trailing" id="3x8-pR-ajf"/>
+                            <constraint firstItem="Od8-3c-9GW" firstAttribute="top" secondItem="uJK-tq-KYu" secondAttribute="bottom" constant="9" id="5rY-zO-Ftc"/>
                             <constraint firstItem="zVp-vO-mSZ" firstAttribute="top" secondItem="jgA-oA-EZC" secondAttribute="top" id="CpI-Fz-WS0"/>
                             <constraint firstItem="uJK-tq-KYu" firstAttribute="top" secondItem="H6R-QF-Y6Y" secondAttribute="bottom" constant="8" id="DbE-eD-WUd"/>
                             <constraint firstItem="H6R-QF-Y6Y" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="EE7-g1-b0C"/>
+                            <constraint firstItem="oyR-hU-zM8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="EXI-An-wkx"/>
+                            <constraint firstItem="oyR-hU-zM8" firstAttribute="top" secondItem="uJK-tq-KYu" secondAttribute="bottom" constant="8" id="Fff-6C-t2e"/>
+                            <constraint firstItem="Od8-3c-9GW" firstAttribute="leading" secondItem="oyR-hU-zM8" secondAttribute="trailing" constant="8" id="Gj4-Fh-6jU"/>
                             <constraint firstItem="MgR-XV-1qz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="HaY-Gq-kGO"/>
                             <constraint firstItem="jgA-oA-EZC" firstAttribute="height" secondItem="6zv-D6-lVP" secondAttribute="height" id="LcT-xI-Bod"/>
                             <constraint firstItem="H6R-QF-Y6Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MAg-0X-hgz"/>
@@ -116,6 +127,8 @@
                         <outletCollection property="colorizeBlueColor" destination="uJK-tq-KYu" collectionClass="NSMutableArray" id="WzA-w2-fnI"/>
                         <outletCollection property="colorizeRedColor" destination="jgA-oA-EZC" collectionClass="NSMutableArray" id="vBP-aE-MHB"/>
                         <outletCollection property="colorizeBlueColor" destination="zVp-vO-mSZ" collectionClass="NSMutableArray" id="fgE-yC-gn5"/>
+                        <outletCollection property="colorizeBlueColor" destination="oyR-hU-zM8" collectionClass="NSMutableArray" id="zrw-WW-cgm"/>
+                        <outletCollection property="colorizeRedColor" destination="Od8-3c-9GW" collectionClass="NSMutableArray" id="irF-hQ-Z88"/>
                     </connections>
                 </customObject>
             </objects>

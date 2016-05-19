@@ -1,4 +1,6 @@
 #if os(iOS)
+    import UIKit
+    
     public typealias BaseView = UIView
     public typealias Color = UIColor
     public typealias Font = UIFont
@@ -181,6 +183,19 @@ public class BaseConfigView: BaseView {
         }
     }
 
+    extension UISwitch {
+        public override func defaultVizFigColorize(color: UIColor) {
+            onTintColor = color
+        }
+    }
+
+    extension UISlider {
+        public override func defaultVizFigColorize(color: UIColor) {
+            tintColor = color
+        }
+    }
+
+    
     extension UISegmentedControl {
         
         private func updateTitleTextAttrs(attrName: String, value: AnyObject, state: UIControlState) {
