@@ -60,6 +60,7 @@ def getAstLines(className, swiftPrefix):
     deploy_target = os.environ.get("IPHONEOS_DEPLOYMENT_TARGET", "0.0")     # 9.2
     arch = os.environ.get("arch", "unknown_arch")                           # arm64
     prefix = os.environ.get("SWIFT_PLATFORM_TARGET_PREFIX", "no_prefix")    # ios
+    other_flags = os.environ.get("OTHER_SWIFT_FLAGS","")
     
     # targets look like "arm64-apple-ios9.2"
     target = "%s-apple-%s%s" % (arch, prefix, deploy_target)
@@ -67,8 +68,8 @@ def getAstLines(className, swiftPrefix):
     print "Setting TARGET to", target
     
     #cmd = "env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcrun -sdk %s swiftc -print-ast %s" % (sdk, swiftFile)
-    cmd = "xcrun -sdk %s swiftc -sdk `xcrun --show-sdk-path --sdk %s` -target %s -print-ast %s" % \
-        (sdk, sdk, target, swiftFile)
+    cmd = "xcrun -sdk %s swiftc -sdk `xcrun --show-sdk-path --sdk %s` -target %s -print-ast %s %s" % \
+        (sdk, sdk, target, swiftFile, other_flags)
     header = doCmd(cmd)
     
 #    print "Header:\n", header
