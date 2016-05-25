@@ -16,6 +16,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9E91CCE73E2D1653A9DC58EB /* Pods_VizFig_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1902BF566FB28FDD01619E3A /* Pods_VizFig_Example.framework */; };
 		C94852E04F8F2A2FDDCE3645 /* Pods_VizFigExampleOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C71C6763C7C7278550CBC8D /* Pods_VizFigExampleOSX.framework */; };
+		EC1F691F1CF62A8B0044F23A /* ExampleMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F691E1CF62A8B0044F23A /* ExampleMode.swift */; };
 		EC2EE8C71B691A2200A8CC37 /* VizFig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EE8C61B691A2200A8CC37 /* VizFig.framework */; };
 		EC5265601CE7DD0C00C036CC /* swift.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655E1CE7DD0C00C036CC /* swift.py */; };
 		EC5265611CE7DD0C00C036CC /* xcode_build_step_parse_header.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */; };
@@ -78,6 +79,7 @@
 		AC35305B6E8035126ECD73E8 /* Pods-VizFigExampleOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.debug.xcconfig"; sourceTree = "<group>"; };
 		D9BA23E2C343E739FC998593 /* Pods-VizFig_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DDF75A63F02F78D1FD834C66 /* Pods-VizFig_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC1F691E1CF62A8B0044F23A /* ExampleMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleMode.swift; sourceTree = "<group>"; };
 		EC2EE8C41B6919F200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "Pods/../build/Debug-iphoneos/VizFig.framework"; sourceTree = "<group>"; };
 		EC2EE8C61B691A2200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "../../../Library/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator/VizFig.framework"; sourceTree = "<group>"; };
 		EC52655E1CE7DD0C00C036CC /* swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = swift.py; path = ../Pod/Scripts/swift.py; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				EC6B791A1B666D3A002478A9 /* Config.swift */,
+				EC1F691E1CF62A8B0044F23A /* ExampleMode.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -660,6 +663,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				EC1F691F1CF62A8B0044F23A /* ExampleMode.swift in Sources */,
 				EC69A5521B685A3400A5169A /* MagicView.swift in Sources */,
 				EC6B791B1B666D3A002478A9 /* Config.swift in Sources */,
 			);

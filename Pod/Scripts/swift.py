@@ -35,7 +35,7 @@ def sourceFileDir():
     except:
         return "/tmp"
 
-def doCmd(cmd, extraEnv=None):
+def doCmd(cmd, extraEnv=None, error_processor=None):
     print "Executing cmd:", cmd
     e = None
     if extraEnv:
@@ -49,6 +49,8 @@ def doCmd(cmd, extraEnv=None):
         print "Error output:", e.output
         raise(e)
     if err != "":
+        if error_processor:
+            err = error_processor(err)
         print "Standard Error:", err
     return output.strip()
 
@@ -70,7 +72,12 @@ def getAstLines(className, swiftPrefix):
     #cmd = "env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcrun -sdk %s swiftc -print-ast %s" % (sdk, swiftFile)
     cmd = "xcrun -sdk %s swiftc -sdk `xcrun --show-sdk-path --sdk %s` -target %s -print-ast %s %s" % \
         (sdk, sdk, target, swiftFile, other_flags)
-    header = doCmd(cmd)
+    
+    def strip_error(txt):
+        # futz with the output so Xcode doesn't freak about unimportant errors
+        return txt.replace(":", ";")
+
+    header = doCmd(cmd, error_processor=strip_error)
     
 #    print "Header:\n", header
     

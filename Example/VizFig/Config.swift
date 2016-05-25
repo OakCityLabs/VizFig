@@ -18,6 +18,8 @@ enum BogusConfiguration {
 
 enum Configuration {
     
+    static let mode = ExampleMode.Debug
+    
     static let redColor = UIColor.redColor()
     static let blueColor = Configuration.colorForHexValue(0x1122ee)
     static let imgColor: UIColor = {
