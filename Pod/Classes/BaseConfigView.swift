@@ -169,6 +169,18 @@ public class BaseConfigView: BaseView {
         }
     }
     
+    extension UITextView {
+        public override func defaultVizFigFonterize(font: UIFont) {
+            self.font = font
+        }
+        public override func defaultVizFigColorize(color: UIColor) {
+            textColor = color
+        }
+        public override func defaultVizFigStringify(string: String) {
+            text = string
+        }
+    }
+    
     extension UIButton {
         public override func defaultVizFigFonterize(font: UIFont) {
             titleLabel?.font = font
