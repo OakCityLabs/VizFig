@@ -203,7 +203,7 @@ public class BaseConfigView: BaseView {
 
     extension UIActivityIndicatorView {
         public override func defaultVizFigColorize(color: UIColor) {
-            color = color
+            self.color = color
         }
     }
     
