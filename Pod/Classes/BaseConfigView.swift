@@ -201,6 +201,12 @@ public class BaseConfigView: BaseView {
         }
     }
 
+    extension UIActivityIndicatorView {
+        public override func defaultVizFigColorize(color: UIColor) {
+            color = color
+        }
+    }
+    
     extension UISlider {
         public override func defaultVizFigColorize(color: UIColor) {
             tintColor = color
