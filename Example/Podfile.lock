@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   VizFig:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   VizFig: 2631aef4f3ac93a32d533f081bbf370919254547
 
 PODFILE CHECKSUM: fbe57be9a21d7ba48dc2509213f5bf01cbcfecd0
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.0.beta.1

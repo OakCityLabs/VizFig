@@ -298,13 +298,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "VizFig_Example" */;
 			buildPhases = (
-				2DA4D4E34974AAF5F0344FEB /* 📦 Check Pods Manifest.lock */,
+				2DA4D4E34974AAF5F0344FEB /* [CP] Check Pods Manifest.lock */,
 				EC6B79191B6669DB002478A9 /* VizFig */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				5175949AD930A3638B2FD4BC /* 📦 Embed Pods Frameworks */,
-				FCA70986B3E7F417E8194E92 /* 📦 Copy Pods Resources */,
+				5175949AD930A3638B2FD4BC /* [CP] Embed Pods Frameworks */,
+				FCA70986B3E7F417E8194E92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,12 +319,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "VizFig_Tests" */;
 			buildPhases = (
-				EDD5A4A41EC6039804023073 /* 📦 Check Pods Manifest.lock */,
+				EDD5A4A41EC6039804023073 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				1AA26F06C3A3C2D9E05F2732 /* 📦 Embed Pods Frameworks */,
-				30985C73D7134535D8F398C5 /* 📦 Copy Pods Resources */,
+				1AA26F06C3A3C2D9E05F2732 /* [CP] Embed Pods Frameworks */,
+				30985C73D7134535D8F398C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,13 +340,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC1C61D1B7AC47900407F92 /* Build configuration list for PBXNativeTarget "VizFigExampleOSX" */;
 			buildPhases = (
-				D46A82587C07BA8D7F0D7E58 /* 📦 Check Pods Manifest.lock */,
+				D46A82587C07BA8D7F0D7E58 /* [CP] Check Pods Manifest.lock */,
 				ECC1C5F11B7AC47900407F92 /* Sources */,
 				ECC1C5F21B7AC47900407F92 /* Frameworks */,
 				ECC1C5F31B7AC47900407F92 /* Resources */,
 				ECC1C6201B7AC7F000407F92 /* ShellScript */,
-				34BF32625145331CFFA5CDA8 /* 📦 Embed Pods Frameworks */,
-				53C87C9B624C81DA769A5D6B /* 📦 Copy Pods Resources */,
+				34BF32625145331CFFA5CDA8 /* [CP] Embed Pods Frameworks */,
+				53C87C9B624C81DA769A5D6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,14 +401,16 @@
 			attributes = {
 				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0830;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 					ECC1C5F41B7AC47900407F92 = {
@@ -492,14 +494,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1AA26F06C3A3C2D9E05F2732 /* 📦 Embed Pods Frameworks */ = {
+		1AA26F06C3A3C2D9E05F2732 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,29 +509,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2DA4D4E34974AAF5F0344FEB /* 📦 Check Pods Manifest.lock */ = {
+		2DA4D4E34974AAF5F0344FEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		30985C73D7134535D8F398C5 /* 📦 Copy Pods Resources */ = {
+		30985C73D7134535D8F398C5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,14 +539,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		34BF32625145331CFFA5CDA8 /* 📦 Embed Pods Frameworks */ = {
+		34BF32625145331CFFA5CDA8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,14 +554,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5175949AD930A3638B2FD4BC /* 📦 Embed Pods Frameworks */ = {
+		5175949AD930A3638B2FD4BC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,14 +569,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		53C87C9B624C81DA769A5D6B /* 📦 Copy Pods Resources */ = {
+		53C87C9B624C81DA769A5D6B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,19 +584,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D46A82587C07BA8D7F0D7E58 /* 📦 Check Pods Manifest.lock */ = {
+		D46A82587C07BA8D7F0D7E58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EC6B79191B6669DB002478A9 /* VizFig */ = {
@@ -624,29 +626,29 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/../Pod/Scripts/xcode_build_step_parse_header.py -i Configuration -f Config -o MagicView\n";
 		};
-		EDD5A4A41EC6039804023073 /* 📦 Check Pods Manifest.lock */ = {
+		EDD5A4A41EC6039804023073 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FCA70986B3E7F417E8194E92 /* 📦 Copy Pods Resources */ = {
+		FCA70986B3E7F417E8194E92 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -765,8 +767,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -810,8 +814,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -830,6 +836,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -848,6 +855,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -865,6 +873,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -885,6 +894,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizFig_Example.app/VizFig_Example";
 			};
 			name = Debug;
@@ -902,6 +912,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizFig_Example.app/VizFig_Example";
 			};
 			name = Release;
@@ -910,6 +921,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC35305B6E8035126ECD73E8 /* Pods-VizFigExampleOSX.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -927,6 +939,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FA8288B78B1C550D0B9EB5D /* Pods-VizFigExampleOSX.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
