@@ -1,9 +1,9 @@
 #if os(iOS)
     import UIKit
     
-    open typealias BaseView = UIView
-    open typealias Color = UIColor
-    open typealias Font = UIFont
+    public typealias BaseView = UIView
+    public typealias Color = UIColor
+    public typealias Font = UIFont
 #else
     //OSX
     open typealias BaseView = NSView
@@ -24,12 +24,12 @@ open class BaseConfigView: BaseView {
         set {super.frame = CGRect.zero}
     }
 
-    open required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         postInit()
     }
     
-    open required override init(frame: CGRect) {
+    public required override init(frame: CGRect) {
         super.init(frame: frame)
         postInit()
     }
@@ -114,14 +114,14 @@ open class BaseConfigView: BaseView {
     }
 }
 
-@objc open protocol VizFigable {
+@objc public protocol VizFigable {
     func vizFigFonterize(_ font: Font)
     func vizFigBgColorize(_ color: Color)
     func vizFigColorize(_ color: Color)
     func vizFigStringify(_ string: String)
 }
 
-@objc open protocol DefaultVizFigable {
+@objc public protocol DefaultVizFigable {
     func defaultVizFigFonterize(_ font: Font)
     func defaultVizFigBgColorize(_ color: Color)
     func defaultVizFigColorize(_ color: Color)
