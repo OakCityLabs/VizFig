@@ -6,9 +6,9 @@
     public typealias Font = UIFont
 #else
     //OSX
-    open typealias BaseView = NSView
-    open typealias Color = NSColor
-    open typealias Font = NSFont
+    public typealias BaseView = NSView
+    public typealias Color = NSColor
+    public typealias Font = NSFont
 #endif
 
 open class BaseConfigView: BaseView {
