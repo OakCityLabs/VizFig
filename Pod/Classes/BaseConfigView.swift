@@ -1,14 +1,14 @@
 #if os(iOS)
     import UIKit
     
-    public typealias BaseView = UIView
-    public typealias Color = UIColor
-    public typealias Font = UIFont
+    open typealias BaseView = UIView
+    open typealias Color = UIColor
+    open typealias Font = UIFont
 #else
     //OSX
-    public typealias BaseView = NSView
-    public typealias Color = NSColor
-    public typealias Font = NSFont
+    open typealias BaseView = NSView
+    open typealias Color = NSColor
+    open typealias Font = NSFont
 #endif
 
 open class BaseConfigView: BaseView {
@@ -24,12 +24,12 @@ open class BaseConfigView: BaseView {
         set {super.frame = CGRect.zero}
     }
 
-    public required init?(coder aDecoder: NSCoder) {
+    open required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         postInit()
     }
     
-    public required override init(frame: CGRect) {
+    open required override init(frame: CGRect) {
         super.init(frame: frame)
         postInit()
     }
@@ -114,14 +114,14 @@ open class BaseConfigView: BaseView {
     }
 }
 
-@objc public protocol VizFigable {
+@objc open protocol VizFigable {
     func vizFigFonterize(_ font: Font)
     func vizFigBgColorize(_ color: Color)
     func vizFigColorize(_ color: Color)
     func vizFigStringify(_ string: String)
 }
 
-@objc public protocol DefaultVizFigable {
+@objc open protocol DefaultVizFigable {
     func defaultVizFigFonterize(_ font: Font)
     func defaultVizFigBgColorize(_ color: Color)
     func defaultVizFigColorize(_ color: Color)
@@ -131,84 +131,84 @@ open class BaseConfigView: BaseView {
 #if os(iOS)
 
     extension UIView: DefaultVizFigable {
-        public func defaultVizFigFonterize(_ font: UIFont) {
+        open func defaultVizFigFonterize(_ font: UIFont) {
             // no fonts for UIViews
         }
-        public func defaultVizFigBgColorize(_ color: UIColor) {
+        open func defaultVizFigBgColorize(_ color: UIColor) {
             backgroundColor = color
         }
-        public func defaultVizFigColorize(_ color: UIColor) {
+        open func defaultVizFigColorize(_ color: UIColor) {
             backgroundColor = color
         }
-        public func defaultVizFigStringify(_ string: String) {
+        open func defaultVizFigStringify(_ string: String) {
             // no string for basic view
         }
     }
 
     extension UILabel {
-        public override func defaultVizFigFonterize(_ font: UIFont) {
+        open override func defaultVizFigFonterize(_ font: UIFont) {
             self.font = font
         }
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             textColor = color
         }
-        public override func defaultVizFigStringify(_ string: String) {
+        open override func defaultVizFigStringify(_ string: String) {
             text = string
         }
     }
 
     extension UITextField {
-        public override func defaultVizFigFonterize(_ font: UIFont) {
+        open override func defaultVizFigFonterize(_ font: UIFont) {
             self.font = font
         }
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             textColor = color
         }
-        public override func defaultVizFigStringify(_ string: String) {
+        open override func defaultVizFigStringify(_ string: String) {
             text = string
         }
     }
     
     extension UITextView {
-        public override func defaultVizFigFonterize(_ font: UIFont) {
+        open override func defaultVizFigFonterize(_ font: UIFont) {
             self.font = font
         }
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             textColor = color
         }
-        public override func defaultVizFigStringify(_ string: String) {
+        open override func defaultVizFigStringify(_ string: String) {
             text = string
         }
     }
     
     extension UIButton {
-        public override func defaultVizFigFonterize(_ font: UIFont) {
+        open override func defaultVizFigFonterize(_ font: UIFont) {
             titleLabel?.font = font
         }
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             setTitleColor(color, for: .highlighted)
             setTitleColor(color, for: UIControlState())
         }
-        public override func defaultVizFigStringify(_ string: String) {
+        open override func defaultVizFigStringify(_ string: String) {
             setTitle(string, for: .highlighted)
             setTitle(string, for: UIControlState())
         }
     }
 
     extension UISwitch {
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             onTintColor = color
         }
     }
 
     extension UIActivityIndicatorView {
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             self.color = color
         }
     }
     
     extension UISlider {
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             tintColor = color
         }
     }
@@ -222,11 +222,11 @@ open class BaseConfigView: BaseView {
                 setTitleTextAttributes(attrs, for: state)
         }
         
-        public override func defaultVizFigFonterize(_ font: UIFont) {
+        open override func defaultVizFigFonterize(_ font: UIFont) {
             updateTitleTextAttrs(NSFontAttributeName, value: font, state: UIControlState())
             updateTitleTextAttrs(NSFontAttributeName, value: font, state: .highlighted)
         }
-        public override func defaultVizFigColorize(_ color: UIColor) {
+        open override func defaultVizFigColorize(_ color: UIColor) {
             updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: UIControlState())
             updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: .highlighted)
         }
@@ -241,31 +241,31 @@ open class BaseConfigView: BaseView {
             layer?.backgroundColor = color.CGColor
         }
         
-        public func defaultVizFigFonterize(font: NSFont) {
+        open func defaultVizFigFonterize(font: NSFont) {
             // no fonts for UIViews
         }
-        public func defaultVizFigBgColorize(color: NSColor) {
+        open func defaultVizFigBgColorize(color: NSColor) {
             setBackgroundColor(color)
         }
-        public func defaultVizFigColorize(color: NSColor) {
+        open func defaultVizFigColorize(color: NSColor) {
             setBackgroundColor(color)
         }
-        public func defaultVizFigStringify(string: String) {
+        open func defaultVizFigStringify(string: String) {
             // no string for basic view
         }
     }
 
     extension NSTextField {
         
-        public override func defaultVizFigFonterize(font: NSFont) {
+        open override func defaultVizFigFonterize(font: NSFont) {
             cell?.font = font
         }
-        public override func defaultVizFigColorize(color: NSColor) {
+        open override func defaultVizFigColorize(color: NSColor) {
             if let textFieldCell = cell as? NSTextFieldCell {
                 textFieldCell.textColor = color
             }
         }
-        public override func defaultVizFigStringify(string: String) {
+        open override func defaultVizFigStringify(string: String) {
             cell?.title = string
         }
     }
