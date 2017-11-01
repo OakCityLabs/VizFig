@@ -62,16 +62,20 @@ def getAstLines(className, swiftPrefix):
     deploy_target = os.environ.get("IPHONEOS_DEPLOYMENT_TARGET", "0.0")     # 9.2
     arch = os.environ.get("arch", "unknown_arch")                           # arm64
     prefix = os.environ.get("SWIFT_PLATFORM_TARGET_PREFIX", "no_prefix")    # ios
+    swift_version = os.environ.get("SWIFT_VERSION", "0.0")                  # 3.0
     other_flags = os.environ.get("OTHER_SWIFT_FLAGS","")
-    
+  
+    # fix swift_version (compiler wants 3 or 4, not 3.2, 4.1)
+    swift_version = swift_version.split(".")[0] 
+ 
     # targets look like "arm64-apple-ios9.2"
     target = "%s-apple-%s%s" % (arch, prefix, deploy_target)
     
     print "Setting TARGET to", target
     
     #cmd = "env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcrun -sdk %s swiftc -print-ast %s" % (sdk, swiftFile)
-    cmd = "xcrun -sdk %s swiftc -sdk `xcrun --show-sdk-path --sdk %s` -target %s -print-ast %s %s" % \
-        (sdk, sdk, target, swiftFile, other_flags)
+    cmd = "xcrun -sdk %s swiftc -swift-version %s -sdk `xcrun --show-sdk-path --sdk %s` -target %s -print-ast %s %s" % \
+        (sdk, swift_version, sdk, target, swiftFile, other_flags)
     
     def strip_error(txt):
         # futz with the output so Xcode doesn't freak about unimportant errors
