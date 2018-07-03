@@ -78,4 +78,10 @@ class MagicView: BaseConfigView {
         } 
     }
 
+    @IBOutlet var fonterizeBarFont: [UIView]? { 
+        didSet { 
+            fonterize(Configuration.barFont, items: fonterizeBarFont)
+        } 
+    }
+
 }

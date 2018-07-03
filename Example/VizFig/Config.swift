@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum ExampleMode {
-    case Debug, Release
-}
-
 enum BogusConfiguration {
     
     static let bogusRedColor = UIColor.red
@@ -39,7 +35,10 @@ enum Configuration {
     static let bigFont = Configuration.fontWithSize(22)
     static let boringFont = UIFont.systemFont(ofSize: 19)
     static let fooFont = UIFont.systemFont(ofSize: 19)
-    
+    static var barFont: UIFont {
+        return UIFont.systemFont(ofSize: 17)
+    }
+
     static let catchPhraseString = "Spoon!"
     static let versionString: String = {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "99.99"

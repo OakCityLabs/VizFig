@@ -21,6 +21,7 @@
 		EC5265611CE7DD0C00C036CC /* xcode_build_step_parse_header.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */; };
 		EC69A5521B685A3400A5169A /* MagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC69A5511B685A3400A5169A /* MagicView.swift */; };
 		EC6B791B1B666D3A002478A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B791A1B666D3A002478A9 /* Config.swift */; };
+		ECB6042D20EBC5AB0034BF5F /* ExampleMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6042C20EBC5AB0034BF5F /* ExampleMode.swift */; };
 		ECC1C5F81B7AC47900407F92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C5F71B7AC47900407F92 /* AppDelegate.swift */; };
 		ECC1C5FA1B7AC47900407F92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1C5F91B7AC47900407F92 /* ViewController.swift */; };
 		ECC1C5FC1B7AC47900407F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1C5FB1B7AC47900407F92 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = xcode_build_step_parse_header.py; path = ../Pod/Scripts/xcode_build_step_parse_header.py; sourceTree = "<group>"; };
 		EC69A5511B685A3400A5169A /* MagicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicView.swift; sourceTree = "<group>"; };
 		EC6B791A1B666D3A002478A9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ECB6042C20EBC5AB0034BF5F /* ExampleMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMode.swift; sourceTree = "<group>"; };
 		ECC1C5F51B7AC47900407F92 /* VizFigExampleOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizFigExampleOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1C5F71B7AC47900407F92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC1C5F91B7AC47900407F92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				EC6B791A1B666D3A002478A9 /* Config.swift */,
+				ECB6042C20EBC5AB0034BF5F /* ExampleMode.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -632,6 +635,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				ECB6042D20EBC5AB0034BF5F /* ExampleMode.swift in Sources */,
 				EC69A5521B685A3400A5169A /* MagicView.swift in Sources */,
 				EC6B791B1B666D3A002478A9 /* Config.swift in Sources */,
 			);

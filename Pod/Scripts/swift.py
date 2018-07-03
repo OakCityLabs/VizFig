@@ -126,8 +126,12 @@ def configurationAttributes(className, classFile):
         for line in lines:
             if not (("static let" in line) or ("static var" in line)): continue
             if line.find(": %s" % aClass) > -1:
-                (dummy, attrName) = line.split("let")
+                if " let " in line:
+                    (dummy, attrName) = line.split("let")
+                else:
+                    (dummy, attrName) = line.split("var")
                 #print "attrName:", attrName
+                attrName = attrName.strip()
                 attrName = attrName[:-1 * len(aClass)]  # strip class name off end of line
                 attrName = attrName.replace(":","")
                 attrName = attrName.replace(" ","")
