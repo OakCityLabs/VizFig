@@ -223,12 +223,12 @@ open class BaseConfigView: BaseView {
         }
         
         open override func defaultVizFigFonterize(_ font: UIFont) {
-            updateTitleTextAttrs(NSFontAttributeName, value: font, state: UIControlState())
-            updateTitleTextAttrs(NSFontAttributeName, value: font, state: .highlighted)
+            updateTitleTextAttrs(NSAttributedStringKey.font.rawValue, value: font, state: UIControlState())
+            updateTitleTextAttrs(NSAttributedStringKey.font.rawValue, value: font, state: .highlighted)
         }
         open override func defaultVizFigColorize(_ color: UIColor) {
-            updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: UIControlState())
-            updateTitleTextAttrs(NSForegroundColorAttributeName, value: color, state: .highlighted)
+            updateTitleTextAttrs(NSAttributedStringKey.foregroundColor.rawValue, value: color, state: UIControlState())
+            updateTitleTextAttrs(NSAttributedStringKey.foregroundColor.rawValue, value: color, state: .highlighted)
         }
     }
 

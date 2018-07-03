@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum ExampleMode {
+    case Debug, Release
+}
+
 enum BogusConfiguration {
     
     static let bogusRedColor = UIColor.red

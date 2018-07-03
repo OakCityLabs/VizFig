@@ -124,7 +124,7 @@ def configurationAttributes(className, classFile):
     for aClass in attributeClasses.keys():
         configAttrs[aClass] = []
         for line in lines:
-            if not line.startswith("  static"): continue
+            if not (("static let" in line) or ("static var" in line)): continue
             if line.find(": %s" % aClass) > -1:
                 (dummy, attrName) = line.split("let")
                 #print "attrName:", attrName

@@ -16,7 +16,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9E91CCE73E2D1653A9DC58EB /* Pods_VizFig_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1902BF566FB28FDD01619E3A /* Pods_VizFig_Example.framework */; };
 		C94852E04F8F2A2FDDCE3645 /* Pods_VizFigExampleOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C71C6763C7C7278550CBC8D /* Pods_VizFigExampleOSX.framework */; };
-		EC1F691F1CF62A8B0044F23A /* ExampleMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F691E1CF62A8B0044F23A /* ExampleMode.swift */; };
 		EC2EE8C71B691A2200A8CC37 /* VizFig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EE8C61B691A2200A8CC37 /* VizFig.framework */; };
 		EC5265601CE7DD0C00C036CC /* swift.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655E1CE7DD0C00C036CC /* swift.py */; };
 		EC5265611CE7DD0C00C036CC /* xcode_build_step_parse_header.py in Resources */ = {isa = PBXBuildFile; fileRef = EC52655F1CE7DD0C00C036CC /* xcode_build_step_parse_header.py */; };
@@ -79,7 +78,6 @@
 		AC35305B6E8035126ECD73E8 /* Pods-VizFigExampleOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFigExampleOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX.debug.xcconfig"; sourceTree = "<group>"; };
 		D9BA23E2C343E739FC998593 /* Pods-VizFig_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DDF75A63F02F78D1FD834C66 /* Pods-VizFig_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VizFig_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC1F691E1CF62A8B0044F23A /* ExampleMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleMode.swift; sourceTree = "<group>"; };
 		EC2EE8C41B6919F200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "Pods/../build/Debug-iphoneos/VizFig.framework"; sourceTree = "<group>"; };
 		EC2EE8C61B691A2200A8CC37 /* VizFig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizFig.framework; path = "../../../Library/Developer/Xcode/DerivedData/VizFig-brqlhswekrikwyczljocqlfdikza/Build/Products/Debug-iphonesimulator/VizFig.framework"; sourceTree = "<group>"; };
 		EC52655E1CE7DD0C00C036CC /* swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = swift.py; path = ../Pod/Scripts/swift.py; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				EC6B791A1B666D3A002478A9 /* Config.swift */,
-				EC1F691E1CF62A8B0044F23A /* ExampleMode.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -304,7 +301,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				5175949AD930A3638B2FD4BC /* [CP] Embed Pods Frameworks */,
-				FCA70986B3E7F417E8194E92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,7 +320,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				1AA26F06C3A3C2D9E05F2732 /* [CP] Embed Pods Frameworks */,
-				30985C73D7134535D8F398C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,7 +341,6 @@
 				ECC1C5F31B7AC47900407F92 /* Resources */,
 				ECC1C6201B7AC7F000407F92 /* ShellScript */,
 				34BF32625145331CFFA5CDA8 /* [CP] Embed Pods Frameworks */,
-				53C87C9B624C81DA769A5D6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,11 +400,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0940;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0940;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 					ECC1C5F41B7AC47900407F92 = {
@@ -500,9 +494,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/VizFig-iOS/VizFig.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VizFig.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,28 +512,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VizFig_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		30985C73D7134535D8F398C5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Tests/Pods-VizFig_Tests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		34BF32625145331CFFA5CDA8 /* [CP] Embed Pods Frameworks */ = {
@@ -545,9 +530,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/VizFig-macOS/VizFig.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VizFig.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -560,28 +548,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/VizFig-iOS/VizFig.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VizFig.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		53C87C9B624C81DA769A5D6B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFigExampleOSX/Pods-VizFigExampleOSX-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D46A82587C07BA8D7F0D7E58 /* [CP] Check Pods Manifest.lock */ = {
@@ -590,13 +566,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VizFigExampleOSX-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC6B79191B6669DB002478A9 /* VizFig */ = {
@@ -632,28 +611,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VizFig_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FCA70986B3E7F417E8194E92 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VizFig_Example/Pods-VizFig_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -665,7 +632,6 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				EC1F691F1CF62A8B0044F23A /* ExampleMode.swift in Sources */,
 				EC69A5521B685A3400A5169A /* MagicView.swift in Sources */,
 				EC6B791B1B666D3A002478A9 /* Config.swift in Sources */,
 			);
@@ -855,7 +821,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -873,7 +840,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -894,7 +862,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizFig_Example.app/VizFig_Example";
 			};
 			name = Debug;
@@ -912,7 +881,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizFig_Example.app/VizFig_Example";
 			};
 			name = Release;
