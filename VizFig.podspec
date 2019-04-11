@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "VizFig"
-  s.version          = "0.2.0"
+  s.version          = "0.3.0"
   s.summary          = "Define your app's style in code, apply the style in Interface Buillder."
   s.description      = <<-DESC
                        When building an app, it's often useful to define elements of style in the code, including things like fonts, colors, and branding strings.  Having a object that encapsulates this configurations helps insure that you Don't Repeat Yourself.  On the downside, you write blocks of code over and over that do nothing but apply styling to interface elements.  This is simple boilerplate code that creates more opportunity for error and obscures the real intent of your code.  VizFig solves this problem by exposing your styling information inside of Interface Builder so you can apply style elements visually.  In the end, you can style your app faster, with less code and still maintain the agility of a single style definition.'
@@ -25,7 +25,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
 
+  s.swift_version = '5.0'
+
   s.platforms             = { :ios => '8.0', :osx => '10.10' }
+
+  s.ios.framework = 'UIKit'
+  s.osx.framework = 'AppKit'
 
   s.requires_arc = true
 

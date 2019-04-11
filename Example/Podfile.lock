@@ -1,5 +1,5 @@
 PODS:
-  - VizFig (0.2.0)
+  - VizFig (0.3.0)
 
 DEPENDENCIES:
   - VizFig (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VizFig: e54bde96e149b52f2f30b59a6252d3243f49b9f4
+  VizFig: 0e9fde062ddb7ddcfc2cb510aca9c01a3cb0b7a5
 
 PODFILE CHECKSUM: fbe57be9a21d7ba48dc2509213f5bf01cbcfecd0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

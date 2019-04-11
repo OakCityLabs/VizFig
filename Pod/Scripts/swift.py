@@ -59,11 +59,20 @@ def getAstLines(className, swiftPrefix):
     swiftFile = os.path.join(sourceFileDir(), shortFile)
 
     sdk = os.environ.get("PLATFORM_NAME", "Unknown")                        # iphoneos
-    deploy_target = os.environ.get("IPHONEOS_DEPLOYMENT_TARGET", "0.0")     # 9.2
-    arch = os.environ.get("arch", "unknown_arch")                           # arm64
+    archs = os.environ.get("ARCHS", "unknown_arch")                         # arm64
+    arch = archs.split(" ")[0]
     prefix = os.environ.get("SWIFT_PLATFORM_TARGET_PREFIX", "no_prefix")    # ios
     swift_version = os.environ.get("SWIFT_VERSION", "0.0")                  # 3.0
     other_flags = os.environ.get("OTHER_SWIFT_FLAGS","")
+
+    ios_deploy_target = os.environ.get("IPHONEOS_DEPLOYMENT_TARGET", "0.0")     # 9.2
+    mac_deploy_target = os.environ.get("MACOSX_DEPLOYMENT_TARGET", "0.0")     # 10.10
+    swift_platform_target = os.environ.get("SWIFT_PLATFORM_TARGET_PREFIX", "unknown")     # macosx
+
+    if "mac" in swift_platform_target:
+        deploy_target = mac_deploy_target
+    else:
+        deploy_target = ios_deploy_target
   
     # fix swift_version (compiler wants 3 or 4, not 3.2, 4.1)
     swift_version = swift_version.split(".")[0] 
@@ -79,7 +88,10 @@ def getAstLines(className, swiftPrefix):
     
     def strip_error(txt):
         # futz with the output so Xcode doesn't freak about unimportant errors
-        return txt.replace(":", ";")
+        txt = txt.replace(":", ";")
+        txt = txt.replace("error", "er_rror")
+        txt = txt.replace("Error", "er_rror")
+        return txt
 
     header = doCmd(cmd, error_processor=strip_error)
     

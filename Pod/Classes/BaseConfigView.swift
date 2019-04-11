@@ -1,11 +1,15 @@
+import Foundation
+
 #if os(iOS)
     import UIKit
-    
+
     public typealias BaseView = UIView
     public typealias Color = UIColor
     public typealias Font = UIFont
 #else
     //OSX
+    import AppKit
+
     public typealias BaseView = NSView
     public typealias Color = NSColor
     public typealias Font = NSFont
@@ -187,11 +191,11 @@ open class BaseConfigView: BaseView {
         }
         open override func defaultVizFigColorize(_ color: UIColor) {
             setTitleColor(color, for: .highlighted)
-            setTitleColor(color, for: UIControlState())
+            setTitleColor(color, for: .normal)
         }
         open override func defaultVizFigStringify(_ string: String) {
             setTitle(string, for: .highlighted)
-            setTitle(string, for: UIControlState())
+            setTitle(string, for: .normal)
         }
     }
 
@@ -216,19 +220,19 @@ open class BaseConfigView: BaseView {
     
     extension UISegmentedControl {
         
-        fileprivate func updateTitleTextAttrs(_ attrName: String, value: AnyObject, state: UIControlState) {
-                var attrs = titleTextAttributes(for: state) ?? [AnyHashable: Any]()
-                attrs[NSString(string:attrName)] = value
+        fileprivate func updateTitleTextAttrs(_ attrName: NSAttributedString.Key, value: AnyObject, state: UIControl.State) {
+                var attrs = titleTextAttributes(for: state) ?? [NSAttributedString.Key: Any]()
+                attrs[attrName] = value
                 setTitleTextAttributes(attrs, for: state)
         }
         
         open override func defaultVizFigFonterize(_ font: UIFont) {
-            updateTitleTextAttrs(NSAttributedStringKey.font.rawValue, value: font, state: UIControlState())
-            updateTitleTextAttrs(NSAttributedStringKey.font.rawValue, value: font, state: .highlighted)
+            updateTitleTextAttrs(NSAttributedString.Key.font, value: font, state: .normal)
+            updateTitleTextAttrs(NSAttributedString.Key.font, value: font, state: .highlighted)
         }
         open override func defaultVizFigColorize(_ color: UIColor) {
-            updateTitleTextAttrs(NSAttributedStringKey.foregroundColor.rawValue, value: color, state: UIControlState())
-            updateTitleTextAttrs(NSAttributedStringKey.foregroundColor.rawValue, value: color, state: .highlighted)
+            updateTitleTextAttrs(NSAttributedString.Key.foregroundColor, value: color, state: .normal)
+            updateTitleTextAttrs(NSAttributedString.Key.foregroundColor, value: color, state: .highlighted)
         }
     }
 
@@ -238,34 +242,34 @@ open class BaseConfigView: BaseView {
         
         private func setBackgroundColor(color: NSColor){
             wantsLayer = true
-            layer?.backgroundColor = color.CGColor
+            layer?.backgroundColor = color.cgColor
         }
         
-        open func defaultVizFigFonterize(font: NSFont) {
+        open func defaultVizFigFonterize(_ font: NSFont) {
             // no fonts for UIViews
         }
-        open func defaultVizFigBgColorize(color: NSColor) {
-            setBackgroundColor(color)
+        open func defaultVizFigBgColorize(_ color: NSColor) {
+            setBackgroundColor(color: color)
         }
-        open func defaultVizFigColorize(color: NSColor) {
-            setBackgroundColor(color)
+        open func defaultVizFigColorize(_ color: NSColor) {
+            setBackgroundColor(color: color)
         }
-        open func defaultVizFigStringify(string: String) {
+        open func defaultVizFigStringify(_ string: String) {
             // no string for basic view
         }
     }
 
     extension NSTextField {
         
-        open override func defaultVizFigFonterize(font: NSFont) {
+        open override func defaultVizFigFonterize(_ font: NSFont) {
             cell?.font = font
         }
-        open override func defaultVizFigColorize(color: NSColor) {
+        open override func defaultVizFigColorize(_ color: NSColor) {
             if let textFieldCell = cell as? NSTextFieldCell {
                 textFieldCell.textColor = color
             }
         }
-        open override func defaultVizFigStringify(string: String) {
+        open override func defaultVizFigStringify(_ string: String) {
             cell?.title = string
         }
     }

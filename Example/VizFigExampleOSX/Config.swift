@@ -10,23 +10,23 @@ import Cocoa
 
 class BogusConfiguration {
     
-    static let bogusRedColor = NSColor.redColor()
-    static let bogusBlueColor = Configuration.colorForHexValue(0x1122ee)
-    static let bogusFont = NSFont.systemFontOfSize(15)
+    static let bogusRedColor = NSColor.red
+    static let bogusBlueColor = Configuration.colorForHexValue(colorHex: 0x1122ee)
+    static let bogusFont = NSFont.systemFont(ofSize: 15)
     static let bogusString = "Bogus"
 }
 
 class Configuration {
     
-    static let redColor = NSColor.redColor()
-    static let blueColor = Configuration.colorForHexValue(0x1122ee)
+    static let redColor = NSColor.red
+    static let blueColor = Configuration.colorForHexValue(colorHex: 0x1122ee)
     
-    static let boringFont = NSFont.systemFontOfSize(19)
-    static let macFont = NSFont.systemFontOfSize(19)
+    static let boringFont = NSFont.systemFont(ofSize: 19)
+    static let macFont = NSFont.systemFont(ofSize: 19)
     
     static let catchPhraseString = "Spoon!"
 
-    private class func colorForHexValue(colorHex: Int) -> NSColor {
+    class func colorForHexValue(colorHex: Int) -> NSColor {
         let red =   (colorHex & 0xff0000) >> 16
         let green = (colorHex & 0x00ff00) >> 8
         let blue  = colorHex & 0x0000ff
@@ -38,8 +38,8 @@ class Configuration {
 
 class AlsoBogusConfiguration {
     
-    static let bogusRedColor = NSColor.redColor()
-    static let bogusBlueColor = Configuration.colorForHexValue(0x1122ee)
-    static let bogusFont = NSFont.systemFontOfSize(15)
+    static let bogusRedColor = NSColor.red
+    static let bogusBlueColor = Configuration.colorForHexValue(colorHex: 0x1122ee)
+    static let bogusFont = NSFont.systemFont(ofSize: 15)
     static let bogusString = "Bogus"
 }
