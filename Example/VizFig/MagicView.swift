@@ -3,6 +3,9 @@
 // Generated on class attributes of the 'Configuration' class.
 // Do not edit.  This file will be overwritten.
 
+// Disable swiftlint for this generated file
+// swiftlint:disable
+
 import VizFig
 
 class MagicView: BaseConfigView {

@@ -194,6 +194,9 @@ classHeaderTemplate = """//
 // Generated on class attributes of the '%(inputClass)s' class.
 // Do not edit.  This file will be overwritten.
 
+// Disable swiftlint for this generated file
+// swiftlint:disable
+
 import VizFig
 
 class %(className)s: BaseConfigView {"""
